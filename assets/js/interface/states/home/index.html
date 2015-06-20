@@ -1,20 +1,21 @@
 <section layout="column">
   <section layout="row" layout-margin layout-fill layout-padding>
     <section flex="33">
-      <md-card class="md-accent">
+      <md-card>
 			  <md-toolbar class="md-accent">
 			    <h2 class="md-toolbar-tools"><span>Choose Drugs to View</span></h2>
 			  </md-toolbar>
-			  
-			  <div layout="column" layout-margin>
-				  <p>Combine multiple drugs to find adverse reactions</p>
-				  
-				  <md-select ng-model="drug.drug" placeholder="Select a drug" ng-repeat="drug in drugs">
-					  <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
-					</md-select>
-					
-					<md-button ng-click="addDrug()">Add drug</md-button>
-				</div>
+			  <md-card-content>
+				  <div layout="column" layout-margin>
+					  <p>Combine multiple drugs to find adverse reactions</p>
+					  
+					  <md-select ng-model="drug.drug" placeholder="Select a drug" ng-repeat="drug in drugs">
+						  <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
+						</md-select>
+						
+						<md-button ng-click="addDrug()">Add drug</md-button>
+					</div>
+			 </md-card-content>
 			</md-card>
     </section>
     <section flex="66">
