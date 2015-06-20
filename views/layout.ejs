@@ -24,8 +24,17 @@
     <![endif]-->
   </head>
 
-  <body>
-    <%- body %>
+  <body ng-app="gsa18f">
+    <md-toolbar class="demo-toolbar md-primary md-default-theme">
+      <div layout="row" layout-margin layout-padding>
+        <div><h3>Drugs</h3></div>
+        <div><a href="/">Data Viewer</a></div>
+        <div><a href="/about">About</a></div>
+      </div>
+    </md-toolbar>
+    <div layout="row" layout-wrap>
+      <%- body %>
+    </div>
   </body>
 
     <!--TEMPLATES-->
