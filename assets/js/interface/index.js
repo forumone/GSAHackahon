@@ -1,8 +1,10 @@
-var gsa18f = angular.module('gsa18f', [ 'ngRoute', 'ui.router' ]);
-gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
+var gsa18f = angular.module('gsa18f', [ 'ngRoute', 'ui.router', 'ngMaterial']);
+gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $mdThemingProvider) {
   // $locationProvider.html5Mode(true);
 
   $urlRouterProvider.otherwise('/');
+  
+  $mdThemingProvider.theme('default').primaryPalette('cyan').accentPalette('light-blue');
 
   $stateProvider
   // Home page

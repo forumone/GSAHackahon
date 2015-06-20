@@ -2,7 +2,7 @@ angular.module('gsa18f').controller('DrugController', function ($scope, $statePa
   fdaLabel.getLabel($stateParams.id).then(function(result) {
     // TODO: Make sure that this logic is correct, maybe encapsulate in a $filter
     if (angular.isArray(result) && 1 == result.length) {
-      $scope.title = result[0].openfda.brand_name[0];
+      $scope.title = result.results[0].openfda.brand_name[0];
     }
   })
   .catch(function() {

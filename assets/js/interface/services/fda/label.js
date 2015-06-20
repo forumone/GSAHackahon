@@ -6,11 +6,25 @@ angular.module('gsa18f').service('fdaLabel', function($http) {
       }
     })
     .then(function(result) {
-      return result.data.results;
+      return result.data;
+    });
+  }
+  
+  function search(search, skip, limit) {
+    return $http.get('/api/fda/label.json', {
+      params : {
+        search : search,
+        skip : skip,
+        limit : limit
+      }
+    })
+    .then(function(result) {
+      return result.data;
     });
   }
   
   return {
-    getLabel : getLabel
+    getLabel : getLabel,
+    search : search
   }
 });

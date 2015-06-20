@@ -1,1 +1,25 @@
-<h1>Hello world</h1>
+<md-content>
+  <md-list>
+    <md-list-item ng-repeat="label in drugLabels">
+      <div class="md-list-item-text">
+        <a ui-sref="drug({id : label.id})">{{label.openfda.brand_name[0] || label.spl_product_data_elements[0] }}</a>
+      </div>
+    </md-list-item>
+  </md-list>
+</md-content>
+
+<paging
+  class="small"
+  page="currentPage"
+  page-size="limit"
+  total="total"
+  adjacent="2"
+  dots="..."
+  scroll-top="true"
+  hide-if-empty="true"
+  ul-class="pagination"
+  active-class="md-primary"
+  disabled-class="disabled"
+  show-prev-next="true"
+  paging-action="pagingAction(page)">
+</paging>
