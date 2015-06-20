@@ -11,7 +11,7 @@ set :site_folder, %w{}
 set :webroot, 'public'
 
 # The path to the project on the server
-set :deploy_to, '/var/www/vhosts/agilebpa.dev'
+set :deploy_to, '/var/www/vhosts/agilebpa.www'
 
 # Where the temporary directory is
 set :tmp_dir, fetch(:deploy_to)
