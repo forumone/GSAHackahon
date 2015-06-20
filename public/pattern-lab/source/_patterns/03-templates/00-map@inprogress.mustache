@@ -1,0 +1,27 @@
+{{> regions-header }}
+
+<main id="main" class="main" role="main">
+  <ui-view class="ng-scope">
+    {{> regions-info-window }}
+    <div class="layout-tab-control">
+      <button class="control">Compare</button>
+    </div>
+    <div class="angular-leaflet-map leaflet-container leaflet-fade-anim">
+      <div class="leaflet-popup-pane">
+        <div style="opacity: 1; transform: translate(625px, 452px); bottom: -7px; left: -172px;" class="leaflet-popup  leaflet-zoom-animated">
+          <a href="#" class="leaflet-popup-close-button">×</a>
+          {{> components-popup }}
+          <div class="leaflet-popup-tip-container"><div class="leaflet-popup-tip"></div></div>
+        </div>
+      </div>
+      <div class="leaflet-top leaflet-left">
+        <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+          <a title="Zoom in" href="#" class="leaflet-control-zoom-in">+</a>
+          <a title="Zoom out" href="#" class="leaflet-control-zoom-out">-</a>
+        </div>
+      </div>
+    </div>
+  </ui-view>
+</main>
+
+{{> regions-footer }}

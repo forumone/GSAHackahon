@@ -1,0 +1,88 @@
+<nav role="navigation">
+  <ul role="menu" class="nav nav--secondary-menu js-dropdown-menu">
+    <li role="presentation" class="nav__item has-subnav">
+      <button role="menu-item" class="nav__link">Demographics</button>
+      <ul class="nav nav--subnav">
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('rpctlow')">% Low wage workers</button>
+        </li>
+      </ul>
+    </li>
+    <li role="presentation" class="nav__item has-subnav">
+      <button role="menu-item" class="nav__link">Built Environment</button>
+      <ul class="nav nav--subnav">
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('d3bpo3')">Intersection density</button>
+        </li>
+      </ul>
+    </li>
+    <li role="presentation" class="nav__item has-subnav">
+      <button role="menu-item" class="nav__link">Cancer Incidences</button>
+      <ul class="nav nav--subnav">
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-all_b_all')">All cancers</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-bla_b_all')">Bladder cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-brs_f_all')">Breast cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-col_b_all')">Colon and rectal cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-ute_f_all')">Endometrial cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-krp_b_all')">Kidney cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-leu_b_all')">Leukemia (all types)</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-lng_b_all')">Lung cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-mel_b_all')">Melanoma</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-nhl_b_all')">Non-Hodgkin's lymphoma</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-c19_b_all')">Pancreatic cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-pro_m_all')">Prostate cancer</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('county-cancer-rate-thy_b_all')">Thyroid cancer</button>
+        </li>
+      </ul>
+    </li>
+    <li role="presentation" class="nav__item has-subnav">
+      <button role="menu-item" class="nav__link">Cancer Risk</button>
+      <ul class="nav nav--subnav">
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('nata')">National toxics assessment</button>
+        </li>
+      </ul>
+    </li>
+    <li role="presentation" class="nav__item has-subnav">
+      <button role="menu-item" class="nav__link">Exposure Data</button>
+      <ul class="nav nav--subnav">
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('trinet')">Toxic release inventory</button>
+        </li>
+      </ul>
+    </li>
+    <li role="presentation" class="nav__item has-subnav">
+      <button role="menu-item" class="nav__link">Access to Health Care</button>
+      <ul class="nav nav--subnav">
+        <li class="nav__item">
+          <button class="nav__link" ng-click="toggleLayer('access-to-care')">Physicians per capita</button>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,48 @@
+<div class="homepage-intro">
+  <h1 class="homepage-intro__title">You Are Where You live</h1>
+  <div class="homepage-intro__intro">
+    <p>Neighborhood Scan allows you to identify key environmental risk factors for cancer present at any address in the U.S. You can assess the severity of each of the factors in your area, compare the environmental risks to reported incidences of cancer, and compare the relative cancer risk of multiple neighborhoods.</p>
+  </div>
+  <form class="homepage-intro__form">
+    <div class="form-item form-item--select">
+      <label class="form-item__label element-invisible" for="data-filters">Search Terms</label>
+      <select id="data-filters" name="select" class="form-select">
+        <optgroup label="Demographics">
+          <option>% Low wage workers</option>
+        </optgroup>
+        <optgroup label="Built Environment">
+          <option>Intersection density</option>
+        </optgroup>
+        <optgroup label="Cancer Incidences">
+          <option>All cancers</option>
+          <option>Bladder cancer</option>
+          <option>Breast cancer</option>
+          <option>Colon and rectal cancer</option>
+          <option>Endometrial cancer</option>
+          <option>Kidney cancer</option>
+          <option>Leukemia (all types)</option>
+          <option>Lung cancer</option>
+          <option>Melanoma</option>
+          <option>Non-Hodgkin's lymphoma</option>
+          <option>Pancreatic cancer</option>
+          <option>Prostate cancer</option>
+          <option>Thyroid cancer</option>
+        </optgroup>
+        <optgroup label="Cancer Risk">
+          <option>National toxics assessments</option>
+        </optgroup>
+        <optgroup label="Exposure Data">
+          <option>Toxic release inventory</option>
+        </optgroup>
+        <optgroup label="Access to Health Care">
+          <option>Physicians per capita</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-item form-item--textfield">
+      <label class="element-invisible" for="city-zip">City or Zip</label>
+      <input placeholder="City or Zip" type="text" autocapitalize="off" autocorrect="off" id="city-zip" name="textfield" size="28" maxlength="128" class="form-text">
+    </div>
+    {{> components-search-button }}
+  </form>
+</div>

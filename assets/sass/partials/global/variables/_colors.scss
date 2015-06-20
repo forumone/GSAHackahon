@@ -1,0 +1,31 @@
+// @file
+// Color variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+$nci-blue: #2e7bab;
+$nci-dark-blue: #146087;
+$nci-white: #fcfcfc;
+$nci-orange: #d14600;
+$nci-light-orange: #fc8d59;
+$nci-dark-gray: #333;
+$nci-medium-gray: #bdbdbd;
+$nci-light-gray: #e7e7e7;
+
+$primary-text-color: $nci-dark-gray;
+$secondary-text-color: #555;
+$heading-text-color: $nci-dark-gray;
+$body-color: $nci-white;
+$link-color: $nci-blue;
+$link-hover-color: $nci-dark-blue;
+$selection-background: $nci-blue;
+$selection-foreground: #fff;
+
+// Buttons
+$button-bg-color: #2b8cbe;
+$button-border-color: #045a8d;
+$button-text-color: #fff;
+$button-disabled-bg-color: #818181;
+$button-disabled-border-color: #4f4f4f;
+
+// Forms
+$border-color: $nci-medium-gray;

@@ -1,0 +1,15 @@
+<header class="header" role="banner">
+  <div class="header__top-bar">
+    <div class="layout-constrain">
+      {{> components-site-name }}
+      {{> components-main-menu }}
+    </div>
+  </div>
+  {{# viewSecondaryMenu }}
+  <div class="header__bottom-bar">
+    <div class="layout-constrain">
+      {{> components-secondary-menu }}
+    </div>
+  </div>
+  {{/ viewSecondaryMenu }}
+</header>

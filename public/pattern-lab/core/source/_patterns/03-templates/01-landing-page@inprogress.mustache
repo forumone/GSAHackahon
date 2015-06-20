@@ -1,0 +1,20 @@
+{{> organisms-header }}
+{{> organisms-navigation }}
+{{> organisms-preface }}
+
+<main id="main" class="main" role="main">
+  <div class="region-content layout-constrain">
+
+    {{> atoms-page-title }}
+
+    {{# listItems.five }}
+      {{> organisms-image-teaser }}
+    {{/ listItems.five }}
+
+    {{> molecules-pager }}
+
+  </div>
+</main>
+
+{{> organisms-postscript }}
+{{> organisms-footer }}
