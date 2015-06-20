@@ -4,7 +4,7 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
 
   $urlRouterProvider.otherwise('/');
   
-  $mdThemingProvider.theme('default').primaryPalette('cyan').accentPalette('light-blue');
+  $mdThemingProvider.theme('default').primaryPalette('cyan').accentPalette('blue-grey');
 
   $stateProvider
   // Home page
