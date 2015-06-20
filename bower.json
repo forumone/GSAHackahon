@@ -25,6 +25,7 @@
     "lodash": "~3.4.0",
     "jquery-hoverIntent": "~1.8.1",
     "jquery-selectability": "~1.0.1",
-    "angular-material": "master"
+    "angular-material": "master",
+    "d3": "~3.5.5"
   }
 }
