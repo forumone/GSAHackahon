@@ -8,7 +8,12 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
   // Home page
   .state('home', {
     url : '/',
-    templateUrl : 'home/index.html',
+    templateUrl : 'states/home/index.html',
     controller : 'HomeController'
+  })
+  .state('drug', {
+    url : '/drug/:id',
+    templateUrl : 'states/drug/index.html',
+    controller : 'DrugController'
   });
 });
