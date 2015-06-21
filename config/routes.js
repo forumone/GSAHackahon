@@ -35,6 +35,12 @@ module.exports.routes = {
   '/': {
     view: 'homepage',
   },
+  '/about' : {
+    view : 'about',
+    locals: {
+      app: false
+    }
+  },
   
   'GET /api/fda/:endpoint' : 'OpenFdaController.apiProxy'
 
