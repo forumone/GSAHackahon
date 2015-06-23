@@ -19,10 +19,13 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel,
       drug : ''
     });
   }
+
+  $scope.reset = function() {
+    $scope.drugs = [{}];
+  }
   
   $scope.$watch('display', function(newValue, oldValue) {
-    $scope.drugs = [{
-      drug : '',
-    }];
+    $scope.reset();
   });
+  
 });

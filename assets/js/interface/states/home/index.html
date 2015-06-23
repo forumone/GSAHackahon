@@ -25,7 +25,10 @@
 	            </md-select>
 						</div>
 						
-						<md-button ng-click="addDrug()">Add drug</md-button>
+						<div layout="column">
+						  <md-button ng-click="addDrug()" ng-disabled="drugs.length > 2">Add drug</md-button>
+						  <md-button ng-click="reset()">Reset</md-button>
+						</div>
 					</div>
 			 </md-card-content>
 			</md-card>
