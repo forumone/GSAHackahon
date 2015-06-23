@@ -26,6 +26,7 @@
     "jquery-hoverIntent": "~1.8.1",
     "jquery-selectability": "~1.0.1",
     "angular-material": "master",
-    "d3": "~3.5.5"
+    "d3": "~3.5.5",
+    "nvd3": "~1.8.1"
   }
 }
