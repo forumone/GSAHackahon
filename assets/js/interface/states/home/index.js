@@ -1,4 +1,15 @@
-angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel) {
+angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel, substances, $q) {
+  $q.all({
+    brands : substances.getBrands(),
+    substances : substances.getSubstances()
+  })
+  .then(function(results) {
+    $scope.brands = results.brands.brands;
+    $scope.substances = results.substances.substances;
+  });
+  
+  $scope.display = "brand";
+  
   $scope.drugs = [{
     drug : '',
   }];
@@ -8,4 +19,10 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel)
       drug : ''
     });
   }
+  
+  $scope.$watch('display', function(newValue, oldValue) {
+    $scope.drugs = [{
+      drug : '',
+    }];
+  });
 });

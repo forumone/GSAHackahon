@@ -1,7 +1,7 @@
 <section layout="column">
   <section layout="row" layout-margin layout-fill layout-padding>
     <section flex="33">
-      <md-card>
+      <md-card class="md-whiteframe-z3">
 			  <md-toolbar class="md-accent">
 			    <h2 class="md-toolbar-tools"><span>Choose Drugs to View</span></h2>
 			  </md-toolbar>
@@ -9,9 +9,21 @@
 				  <div layout="column" layout-margin>
 					  <p>Combine multiple drugs to find adverse reactions</p>
 					  
-					  <md-select ng-model="drug.drug" placeholder="Select a drug" ng-repeat="drug in drugs">
-						  <md-option ng-value="opt" ng-repeat="opt in neighborhoods2">{{ opt }}</md-option>
-						</md-select>
+					  <p>Select how to find your medicine:</p>
+					  <md-radio-group ng-model="display" layout="row">
+				      <md-radio-button value="brand" class="md-primary">By brand</md-radio-button>
+				      <md-radio-button value="substance" class="md-primary">By substance</md-radio-button>
+				    </md-radio-group>
+				    
+				    <div ng-switch="display">
+						  <md-select ng-model="drug.substance_name" placeholder="Select a substance" ng-repeat="drug in drugs" ng-switch-when="substance">
+							  <md-option ng-value="substance.substance_name" ng-repeat="substance in substances">{{ substance.substance_name }}</md-option>
+							</md-select>
+							
+							<md-select ng-model="drug.brand_name" placeholder="Select a brand" ng-repeat="drug in drugs" ng-switch-when="brand">
+	              <md-option ng-value="brand.brand_name" ng-repeat="brand in brands">{{ brand.brand_name }}</md-option>
+	            </md-select>
+						</div>
 						
 						<md-button ng-click="addDrug()">Add drug</md-button>
 					</div>
