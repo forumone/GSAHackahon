@@ -1,4 +1,4 @@
-angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel, substances, $q, DrugSeriousness) {
+angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel, substances, $q, DrugSeriousness, $mdToast) {
   $q.all({
     brands : substances.getBrands(),
     substances : substances.getSubstances()
@@ -48,6 +48,13 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel,
   $scope.$watchCollection('medicinalproducts', function() {
     if (angular.isArray($scope.medicinalproducts)) {
       if (0 < $scope.medicinalproducts.length) {
+        $mdToast.show({
+          controller : 'LoadingController',
+          templateUrl: 'states/home/loading.html',
+          hideDelay: 0,
+          position: 'bottom right'
+        });
+        
         fdaLabel.getEvents($scope.medicinalproducts)
         .then(function(events) {
 
@@ -74,6 +81,8 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel,
 
             return output;
           }, {});
+          
+          $mdToast.hide();
           
           $scope.data = drugEvents;
         })
