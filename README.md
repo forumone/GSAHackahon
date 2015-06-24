@@ -1,9 +1,9 @@
-#ADS RFQ Pool Two Design
+#ADS RFQ Pool One Design
 Prototype URL: [http://www.agilebpa.forumone.com](http://www.agilebpa.forumone.com).
 
 ## Description
 
-dCARE is a tool to help researchers, from the casual consumer to the healthcare practitioner, find information about adverse effects of drugs as reported to the FDA. You can track our progress on our [https://trello.com/b/nCt1b9Fg/18f-agile-bpa](trello board.)
+dCARE is a tool to help researchers, from the casual consumer to the healthcare practitioner, find information about adverse effects of drugs as reported to the FDA. You can track our progress on our [trello board.](https://trello.com/b/nCt1b9Fg/18f-agile-bpa)
 
 ## Web Starter Kit
 
