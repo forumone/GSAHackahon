@@ -10,6 +10,17 @@ angular.module('gsa18f').service('fdaLabel', function($http) {
     });
   }
   
+  function getEvents(drugs) {
+    return $http.get('/api/fda/drugevents', {
+      params : {
+        drug : drugs
+      }
+    })
+    .then(function(result) {
+      return result.data;
+    });;
+  }
+  
   function search(search, skip, limit) {
     return $http.get('/api/fda/label.json', {
       params : {
@@ -25,6 +36,7 @@ angular.module('gsa18f').service('fdaLabel', function($http) {
   
   return {
     getLabel : getLabel,
-    search : search
+    search : search,
+    getEvents : getEvents
   }
 });
