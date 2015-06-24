@@ -1,5 +1,5 @@
 #ADS RFQ Pool One Design
-Prototype URL: [http://www.agilebpa.forumone.com](http://www.agilebpa.forumone.com).
+Prototype URL: [http://www.agilebpa.forumone.com](http://agilebpa.forumone.com).
 
 ## Description
 
