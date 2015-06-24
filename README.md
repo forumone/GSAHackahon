@@ -1,4 +1,11 @@
-# Web Starter Kit
+#ADS RFQ Pool Two Design
+Prototype URL: [http://www.agilebpa.forumone.com](http://www.agilebpa.forumone.com).
+
+## Description
+
+dCARE is a tool to help researchers, from the casual consumer to the healthcare practitioner, find information about adverse effects of drugs as reported to the FDA. You can track our progress on our [https://trello.com/b/nCt1b9Fg/18f-agile-bpa](trello board.)
+
+## Web Starter Kit
 
 This project has been setup to use a virtual machine for local development to closely mirror the production environment. To use the the virtual machine, follow these instructions.
 
