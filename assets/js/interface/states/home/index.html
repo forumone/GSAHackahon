@@ -16,11 +16,11 @@
 				    </md-radio-group>
 				    
 				    <div ng-switch="display">
-						  <md-select ng-model="drug.substance_name" placeholder="Select a substance" ng-repeat="drug in drugs" ng-switch-when="substance">
+						  <md-select ng-model="drug.medicinalproduct" placeholder="Select a substance" ng-repeat="drug in drugs" ng-switch-when="substance" md-on-close="processChanges()">
 							  <md-option ng-value="substance.substance_name" ng-repeat="substance in substances">{{ substance.substance_name }}</md-option>
 							</md-select>
 							
-							<md-select ng-model="drug.brand_name" placeholder="Select a brand" ng-repeat="drug in drugs" ng-switch-when="brand">
+							<md-select ng-model="drug.medicinalproduct" placeholder="Select a brand" ng-repeat="drug in drugs" ng-switch-when="brand" md-on-close="processChanges()">
 	              <md-option ng-value="brand.brand_name" ng-repeat="brand in brands">{{ brand.brand_name }}</md-option>
 	            </md-select>
 						</div>
@@ -34,7 +34,7 @@
 			</md-card>
     </section>
     <section flex="66">
-      <charts-bar height="400" width="500"></charts-bar>
+      <charts-bar height="400" width="500" data="data"></charts-bar>
     </section>
   </section>
 </section>
