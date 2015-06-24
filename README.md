@@ -1,4 +1,29 @@
-# Web Starter Kit
+#ADS RFQ Pool One Design
+Prototype URL: [http://agilebpa.forumone.com](http://agilebpa.forumone.com).
+
+## Description
+
+dCARE is a tool that enables physicians, pharmacists, nurses, patients and care providers to understand the types of contraindications from taking two or more mental health drugs at the same time. The dCARE tool is specifically design to help those who are taking or prescribing pharmaceuticals for mental health issues (antidepressants and psychostimulants/nootropics) to understand if there are potentially adverse side effects from specific combinations of medicines.
+
+dCare includes the ability to show contradictors for several medications at the same time. It is based on official FDA data, and reduces the research time substantially. You can track our progress on our [trello board.](https://trello.com/b/nCt1b9Fg/18f-agile-bpa)
+
+## Approach
+
+[Insert 750 words, covering use of Personas, Usability Tests, Scenarios, Use Cases, Open Source Front End Tools, interactive approach]
+
+## Team and Labor Categories
+
+	•	Product Manager: M.C. Franzini has authority and responsibility over the quality of the submitted prototype.
+
+	•	Interaction Designer/User Research Lead- Matt Humphrey
+
+	•	Visual Designer - Lisa Drobek
+
+	•	Writer/Content Designer/Content Strategist - Mike Shoag
+
+	•	Usability Tester - Jim Cashel
+	
+## Web Starter Kit
 
 This project has been setup to use a virtual machine for local development to closely mirror the production environment. To use the the virtual machine, follow these instructions.
 
