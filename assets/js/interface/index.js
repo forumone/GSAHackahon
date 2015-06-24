@@ -19,3 +19,12 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
     controller : 'DrugController'
   });
 });
+
+gsa18f.constant('DrugSeriousness', {
+  seriousnessdisabling : "Disability",
+  seriousnesscongenitalanomali : "Congenital Anomaly",
+  seriousnessdeath : "Death",
+  seriousnesshospitalization : "Hospitalization",
+  seriousnesslifethreatening : "Life-threatening",
+  seriousnessother : "Other Serious"
+});
