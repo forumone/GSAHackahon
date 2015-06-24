@@ -42,7 +42,8 @@ module.exports.routes = {
     }
   },
   
-  'GET /api/fda/:endpoint' : 'OpenFdaController.apiProxy',
+  'GET /api/fda/proxy/:endpoint' : 'OpenFdaController.apiProxy',
+  'GET /api/fda/drugevents' : 'OpenFdaController.drugEvents',
   'GET /api/substances/substances' : 'SubstancesController.getSubstances',
   'GET /api/substances/brands' : 'SubstancesController.getBrands'
 
