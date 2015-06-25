@@ -12,8 +12,6 @@
     <!--STYLES-->
     <link rel="stylesheet" href="/vendor/angular-material/angular-material.css">
     <link rel="stylesheet" href="/vendor/nvd3/nv.d3.css">
-    <link rel="stylesheet" href="/styles/legends.css">
-    <link rel="stylesheet" href="/styles/map.css">
     <!--STYLES END-->
 
     <!--[if gte IE 9]><!-->
@@ -28,13 +26,18 @@
   <body ng-app="gsa18f">
     <md-toolbar class="demo-toolbar md-primary md-default-theme md-whiteframe-z5">
       <div layout="row" layout-margin layout-padding>
-        <div><h3>Drugs</h3></div>
+        <div class="logo"><h3>d<strong>Care</strong></h3></div>
         <div><a href="/">Data Viewer</a></div>
         <div><a href="/about">About</a></div>
       </div>
     </md-toolbar>
     <div>
       <%- body %>
+    </div>
+    <div id="footer">
+        <div class="footer-content">
+            To report SUSPECTED ADVERSE REACTIONS, contact the FDA at 1-800-FDA-1088 or <a href="www.fda.gov/medwatch">www.fda.gov/medwatch</a>.
+        </div>
     </div>
   </body>
 
