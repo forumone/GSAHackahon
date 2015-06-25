@@ -30,8 +30,9 @@ dCare includes the ability to show contradictors for several medications at the 
 | 13 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge |          |
 
 ## Team and Labor Categories
-
-	•	Product Manager: M.C. Franzini has authority and responsibility over the quality of the submitted prototype.
+| Role  | Bio | Responsibility | LOE |
+|----|----------|----------|----|
+| Product Manager | M.C. Franzini is a senior project officer at Forum One, where he leads strategy and web development projects for clients in government agencies and nonprofits. Recent clients with whom he has worked on large-scale Drupal projects include the Consumer Financial Protection Bureau, USDA’s Foreign Agricultural Service, USDA’s National Institute for Food and Agriculture, and the U.S. Department of Health’s Office of the National Coordinator for Health IT. He brings an enthusiasm for online community and collaboration, user experience and design, and building innovative web sites to help clients increase their impact. He holds an master’s in international business from the University of Edinburgh and a master’s in political management from the George Washington University. He has worked in the private, government, nonprofit, and education sectors. | M.C. Franzini has authority and responsibility over the quality of the submitted prototype. | XXX hours |
 
 	•	Interaction Designer/User Research Lead- Matt Humphrey
 
