@@ -9,7 +9,7 @@ var _ = require('lodash');
 var Promise = require("bluebird");
 var RateLimiter = require('request-rate-limiter');
 
-var limiter = new RateLimiter(40);
+var limiter = new RateLimiter(240);
 
 /**
  * Sends request to openFDA API
