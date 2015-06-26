@@ -12,7 +12,7 @@ angular.module('gsa18f').directive('chartsBar', function() {
       }).showControls(false) // don't show controls
       .margin({
         left : 125
-      }).yAxis.tickFormat(d3.format(',.1f'));
+      }).yAxis.tickFormat(d3.format(',d'));
 
       d3.select(element[0]).select("svg").remove();
       svg = d3.select(element[0]).append("svg");
