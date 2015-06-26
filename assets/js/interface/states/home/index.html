@@ -15,12 +15,18 @@
 				      <md-radio-button value="substance" class="md-primary">By substance</md-radio-button>
 				    </md-radio-group>
 				    
+				    <md-chips ng-model="drugs" readonly=isReadOnly>
+				      <md-chip-template>
+				        <strong>{{$chip.medicinalproduct}}</strong>
+				      </md-chip-template>
+				    </md-chips>
+				    
 				    <div ng-switch="display">
-						  <md-select ng-model="drug.medicinalproduct" placeholder="Select a substance" ng-repeat="drug in drugs" ng-switch-when="substance" md-on-close="processChanges()">
+						  <md-select ng-model="$parent.newDrug" placeholder="Select a substance" ng-switch-when="substance">
 							  <md-option ng-value="substance.substance_name" ng-repeat="substance in substances">{{ substance.substance_name }}</md-option>
 							</md-select>
 							
-							<md-select ng-model="drug.medicinalproduct" placeholder="Select a brand" ng-repeat="drug in drugs" ng-switch-when="brand" md-on-close="processChanges()">
+							<md-select ng-model="$parent.newDrug" placeholder="Select a brand" ng-switch-when="brand">
 	              <md-option ng-value="brand.brand_name" ng-repeat="brand in brands">{{ brand.brand_name }}</md-option>
 	            </md-select>
 						</div>

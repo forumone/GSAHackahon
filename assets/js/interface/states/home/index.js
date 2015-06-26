@@ -16,16 +16,21 @@ angular.module('gsa18f').controller('HomeController', function($scope, $statePar
     }, { notify : false });
   }
   
-  // Add a new drugs
+  // Add a new drug
   $scope.addDrug = function() {
-    $scope.drugs.push({
-      medicinalproduct : ''
-    });
+    console.log($scope);
+    if ($scope.newDrug) {
+      $scope.drugs.push({
+        medicinalproduct : $scope.newDrug
+      });
+      
+      $scope.newDrug = '';
+    }
   }
 
   // Reset the current parameters
   $scope.reset = function() {
-    $scope.drugs = [{}];
+    $scope.drugs = [];
     
     $scope.medicinalproducts = [];
   }
@@ -115,12 +120,18 @@ angular.module('gsa18f').controller('HomeController', function($scope, $statePar
   });
   
   
+  $scope.isReadOnly = true;
+  $scope.newDrug = '';
+  
   // Convert $stateParams to scope variables
   $scope.display = $stateParams.display;
-  
-  var drugs = angular.isArray($stateParams.drugs) ? $stateParams.drug : [$stateParams.drug];
 
-  $scope.drugs = _.map(drugs, function(medicinalproduct) {
-    return { medicinalproduct : medicinalproduct };
-  });
+  var drugs = angular.isArray($stateParams.drug) ? $stateParams.drug : [$stateParams.drug];
+
+  $scope.drugs = _.chain(drugs)
+   .compact()
+   .map(function(medicinalproduct) {
+     return { medicinalproduct : medicinalproduct };
+   })
+   .value();
 });
