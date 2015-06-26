@@ -20,8 +20,8 @@
 				<md-chips ng-model="drugs" readonly=isReadOnly> <md-chip-template>
 				<strong>{{$chip.medicinalproduct}}</strong> </md-chip-template> </md-chips>
 
-				<div layout="row">
-					<div ng-switch="display" flex="66">
+				<div layout="column" layout-gt-md="row">
+					<div ng-switch="display" flex-gt-md="66">
 						<md-select ng-model="$parent.newDrug"
 							placeholder="Select a substance" ng-switch-when="substance">
 						<md-option ng-value="substance.substance_name"
@@ -33,7 +33,7 @@
 							ng-value="brand.brand_name" ng-repeat="brand in brands">{{
 						brand.brand_name }}</md-option> </md-select>
 					</div>
-					<div flex="33" class="button__add-drug md-raised">
+					<div flex-gt-md="33" class="button__add-drug md-raised">
 						<md-button ng-click="addDrug()" ng-disabled="drugs.length > 2">Add
 						drug</md-button>
 					</div>
