@@ -16,8 +16,6 @@ angular.module('gsa18f').directive('chartsBar', function() {
 
       d3.select(element[0]).select("svg").remove();
       svg = d3.select(element[0]).append("svg");
-
-      nv.utils.windowResize(chart.update);
     } else {
       svg = d3.select(element.find("svg")[0]);
     }
@@ -66,6 +64,12 @@ angular.module('gsa18f').directive('chartsBar', function() {
       });
 
       scope.$watchCollection('data', function() {
+        if (angular.isDefined(scope.data)) {
+          scope.chart = buildChart(element.find('div'), attrs, scope.data, scope.chart);
+        }
+      });
+      
+      nv.utils.windowResize(function() {
         if (angular.isDefined(scope.data)) {
           scope.chart = buildChart(element.find('div'), attrs, scope.data, scope.chart);
         }
