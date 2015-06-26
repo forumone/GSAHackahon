@@ -84,6 +84,7 @@ lib-cov
 *.out
 *.pid
 npm-debug.log
+coverage
 
 ################################################
 # Miscellaneous
