@@ -1,4 +1,4 @@
-angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel, substances, $q, DrugSeriousness, $mdToast) {
+angular.module('gsa18f').controller('HomeController', function($scope, $stateParams, $state, fdaLabel, substances, $q, DrugSeriousness, $mdToast) {
   $q.all({
     brands : substances.getBrands(),
     substances : substances.getSubstances()
@@ -8,27 +8,43 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel,
     $scope.substances = results.substances.substances;
   });
   
+  // Update the current stateParams
+  function updatePage() {
+    $state.go('home', {
+      display : $scope.display,
+      drug : $scope.medicinalproducts
+    }, { notify : false });
+  }
+  
+  // Add a new drugs
   $scope.addDrug = function() {
     $scope.drugs.push({
-      drug : ''
+      medicinalproduct : ''
     });
   }
 
+  // Reset the current parameters
   $scope.reset = function() {
     $scope.drugs = [{}];
     
     $scope.medicinalproducts = [];
   }
   
+  // Check for changes to the display variable
   $scope.$watch('display', function(newValue, oldValue) {
-    $scope.reset();
+    if (newValue != oldValue) {
+      $scope.reset();
+    }
+    
+    updatePage();
   });
   
+  // Check for changes in the list of drugs
   $scope.$watchCollection('drugs', function() {
     $scope.processChanges();
   }, true);
   
-  
+  // Process any changes
   $scope.processChanges = function() {
     var medicinalproducts = _.chain($scope.drugs)
     .map(function(drug) {
@@ -43,6 +59,8 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel,
     if (0 == medicinalproducts.length || 0 < rdiff.length || 0 < ldiff.length) {
       $scope.medicinalproducts = medicinalproducts;
     }
+    
+    updatePage();
   }
   
   $scope.$watchCollection('medicinalproducts', function() {
@@ -97,6 +115,12 @@ angular.module('gsa18f').controller('HomeController', function($scope, fdaLabel,
   });
   
   
-  $scope.reset();
-  $scope.display = "brand";
+  // Convert $stateParams to scope variables
+  $scope.display = $stateParams.display;
+  
+  var drugs = angular.isArray($stateParams.drugs) ? $stateParams.drug : [$stateParams.drug];
+
+  $scope.drugs = _.map(drugs, function(medicinalproduct) {
+    return { medicinalproduct : medicinalproduct };
+  });
 });

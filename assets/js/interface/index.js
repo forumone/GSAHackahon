@@ -9,9 +9,18 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
   $stateProvider
   // Home page
   .state('home', {
-    url : '/',
+    url : '/?display&drug',
     templateUrl : 'states/home/index.html',
-    controller : 'HomeController'
+    controller : 'HomeController',
+    reloadOnSearch: false,
+    params : {
+      drug : {
+        value : []
+      },
+      display : {
+        value : 'brand'
+      }
+    }
   })
   .state('drug', {
     url : '/drug/:id',
