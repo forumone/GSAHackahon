@@ -1,8 +1,18 @@
 .application {
   background-color: rgba(201, 199, 200, .5);
-  padding: 3.5em 0;
+  padding: 1.5em 0 3.5em 0;
   
   .md-whiteframe-z3 {
     background-color: #ffffff;
+  }
+  
+  md-radio-button {
+    margin-left: 0;
+  }
+}
+
+section {
+  p {
+    margin-left: 6px;
   }
 }
