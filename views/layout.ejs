@@ -26,21 +26,28 @@
   </head>
 
   <body ng-app="gsa18f">
-    <md-toolbar class="demo-toolbar md-primary md-default-theme md-whiteframe-z5">
-      <div layout="row" layout-margin layout-padding>
-        <div class="logo"><h3>d<strong>Care</strong></h3></div>
-        <div><a href="/">Data Viewer</a></div>
-        <div><a href="/about">About</a></div>
+    <md-toolbar class="demo-toolbar md-accent md-hue-1 md-whiteframe-z5">
+      <div layout="row" layout-margin>
+        <div class="logo"><img src="/images/dcare-logo.svg" height="44" width="143" /></div>
+        <div flex class="tabs">
+          <md-tabs>
+            <md-tab>
+              <h3>Data Viewer</h3>
+            </md-tab>
+            <md-tab>
+              <h3>About</h3>
+            </md-tab>
+          </md-tabs>
+        </div>
+      </div>
       </div>
     </md-toolbar>
     <div>
       <%- body %>
     </div>
-    <div id="footer">
-        <div class="footer-content">
-            To report SUSPECTED ADVERSE REACTIONS, contact the FDA at 1-800-FDA-1088 or <a href="www.fda.gov/medwatch">www.fda.gov/medwatch</a>.
-        </div>
-    </div>
+    <md-toolbar class="md-primary md-default-theme md-hue-2 footer">
+      <h4>To report SUSPECTED ADVERSE REACTIONS, contact the FDA at 1-800-FDA-1088 or <a href="www.fda.gov/medwatch">www.fda.gov/medwatch</a>.</h4>
+    </md-toolbar>
   </body>
 
     <!--TEMPLATES-->

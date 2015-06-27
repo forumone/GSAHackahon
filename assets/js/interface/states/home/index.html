@@ -1,27 +1,26 @@
-<section layout="column">
-	<section layout="row" layout-sm="column" layout-margin layout-fill
-		layout-padding>
-		<section flex="33" flex-sm="100">
-			<md-card class="md-whiteframe-z3"> <md-toolbar
-				class="md-accent">
-			<h2 class="md-toolbar-tools">
-				<span>Choose Drugs to View</span>
-			</h2>
-			</md-toolbar> <md-card-content>
-			<div layout="column" layout-margin>
-				<p>Combine multiple drugs to find adverse reactions</p>
+<div class="application">
+	<div class="layout-constrain" layout="column">
+		<h1 class="md-toolbar-tools">Drug Contraindication Adverse
+			Reaction Evaluator (dCARE)</h1>
+		<div class="md-whiteframe-z3" layout="row" layout-sm="column">
+			<section flex="33" flex-sm="100" class="controls">
+				<div class="md-hue-1"> 
+				  <md-toolbar class="md-hue-1">
+				    <h2 class="md-toolbar-tools"><span>Choose Drugs to View</span></h2>
+				  </md-toolbar> 
+				<div layout="column" layout-margin>
+					<p>Combine multiple drugs to find adverse reactions</p>
 
-				<p>Select how to find your medicine:</p>
-				<md-radio-group ng-model="display" layout="row" layout-md="column">
-				<md-radio-button value="brand" class="md-primary">By
-				brand</md-radio-button> <md-radio-button value="substance" class="md-primary">By
-				substance</md-radio-button> </md-radio-group>
+					<p>Select how to find your medicine:</p>
+					<md-radio-group ng-model="display" layout="row" layout-md="column">
+					<md-radio-button value="brand" class="md-primary md-hue-3">By
+					brand</md-radio-button> <md-radio-button value="substance"
+						class="md-primary md-hue-3">By substance</md-radio-button> </md-radio-group>
 
-				<md-chips ng-model="drugs" readonly=isReadOnly> <md-chip-template>
-				<strong>{{$chip.medicinalproduct}}</strong> </md-chip-template> </md-chips>
+					<md-chips ng-model="drugs" readonly=isReadOnly> <md-chip-template>
+					<strong>{{$chip.medicinalproduct}}</strong> </md-chip-template> </md-chips>
 
-				<div layout="column" layout-gt-md="row">
-					<div ng-switch="display" flex-gt-md="66">
+					<div ng-switch="display">
 						<md-select ng-model="$parent.newDrug"
 							placeholder="Select a substance" ng-switch-when="substance">
 						<md-option ng-value="substance.substance_name"
@@ -33,25 +32,31 @@
 							ng-value="brand.brand_name" ng-repeat="brand in brands">{{
 						brand.brand_name }}</md-option> </md-select>
 					</div>
-					<div flex-gt-md="33" class="button__add-drug md-raised">
-						<md-button ng-click="addDrug()" ng-disabled="drugs.length > 2">Add
-						drug</md-button>
-					</div>
+					<md-button class="md-raised md-primary md-hue-3"
+						ng-click="addDrug()" ng-disabled="drugs.length > 2">Add
+					drug</md-button>
 				</div>
-				<md-button class="md-raised md-warn" ng-click="reset()">Reset</md-button>
-			</md-card-content> </md-card>
-		</section>
-		<section flex="66" flex-sm="100">
-			<h2>
-				<span>Reported instances of adverse effects for Drugs or
-					Substance</span>
-			</h2>
-			<charts-bar yaxis-label="Number of Reported Instances"
-				xaxis-label="Adverse Effect" height="400" width="500" data="data"></charts-bar>
+			</section>
+			<section flex="66" flex-sm="100">
+				<charts-bar yaxis-label="Number of Reported Instances"
+					xaxis-label="Adverse Effect" height="400" width="500" data="data"></charts-bar>
 
-			<div ng-show="0 < data.length">
-				<a href="/definitions">How to read this chart</a>
-			</div>
-		</section>
+				<div ng-show="0 < data.length">
+					<a href="/definitions">How to read this chart</a>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+<div class="layout-constrain" layout="column">
+	<section>
+		<h2 class="md-toolbar-tools">About dCARE</h2>
+		<p>Lorem ipsum</p>
 	</section>
-</section>
+
+	<section>
+		<h2 class="md-toolbar-tools">About Forum One</h2>
+		<p>Lorem ipsum</p>
+	</section>
+</div>
+</div>

@@ -1,0 +1,16 @@
+.tabs.tabs {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 29px;
+  
+  md-tabs {
+    md-ink-bar {
+      background-color: #eb2e80;
+      padding-bottom: 8px;
+    }
+    
+    md-tab-item {
+      padding-bottom: 0;
+    }
+  }
+}

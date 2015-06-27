@@ -4,7 +4,36 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
 
   $urlRouterProvider.otherwise('/');
   
-  $mdThemingProvider.theme('default').primaryPalette('cyan').accentPalette('blue-grey');
+  var dCarePalette = $mdThemingProvider.extendPalette('cyan', {
+    '300' : 'c9c7c8',
+    '800' : '1daaf1',
+    'A100' : 'eb2e80'
+  });
+  
+  // Register the new color palette map with the name <code>neonRed</code>
+  $mdThemingProvider.definePalette('dCarePalette', dCarePalette);
+  
+  $mdThemingProvider.theme('default')
+    .primaryPalette('dCarePalette')
+    .accentPalette('grey');
+  
+  
+//  $mdThemingProvider.definePalette('dCarePalette', {
+//    '50' : '1daaf1',
+//    '100' : '1daaf1',
+//    '200' : '1daaf1',
+//    '300' : '1daaf1',
+//    '400' : '1daaf1',
+//    '500' : 'ffffff',
+//    '600' : '1daaf1',
+//    '700' : '1daaf1',
+//    '800' : 'c9c7c8',
+//    '900' : '1daaf1',
+//    'A100' : 'eb2e80',
+//    'A200' : '1daaf1',
+//    'A400' : '1daaf1',
+//    'A700' : '1daaf1',
+//  });
 
   $stateProvider
   // Home page
