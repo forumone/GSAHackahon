@@ -31,10 +31,9 @@ function getQueryParams(req, params, defaults) {
  * @return String URL encoded string
  */
 function serialize(obj) {
-  return '?' + Object.keys(obj).reduce(function(a, k) {
-    a.push(k + '=' + encodeURIComponent(obj[k]));
-    return a
-  }, []).join('&');
+  return '?' + Object.keys(obj).map(function(k) {
+    return encodeURIComponent(k) + '=' + encodeURIComponent(obj[k]);
+  }).join('&');
 }
 
 module.exports = {
