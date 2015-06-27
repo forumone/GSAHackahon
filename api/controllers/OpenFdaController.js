@@ -11,6 +11,15 @@ var RateLimiter = require('request-rate-limiter');
 
 var limiter = new RateLimiter(240);
 
+var BluebirdLRU = require("bluebird-lru-cache");
+var options = {
+  max : 1000,
+  maxAge : 1000 * 60 * 60 * 24, // 24 hours
+  noreject : true // Don't reject
+};
+ 
+var cache = BluebirdLRU(options);
+
 /**
  * Sends request to openFDA API
  */
@@ -22,17 +31,36 @@ function apiQuery(endpoint, params) {
   
   var url = "https://api.fda.gov/drug/" + endpoint + parameters.serialize(params);
   
-  return limiter.request({
-    url : url,
-    method : 'GET',
-  })
-  .then(function(result) {
-    return {
-      params : params,
-      url : url,
-      result : JSON.parse(result.body),
-    };
-  });
+  // Try the cache first
+  return cache.get(url)
+    .then(function(result) {
+      if (result) {
+        return result;
+      }
+      else {
+        // If that fails load it from the request imiter
+        return limiter.request({
+          url : url,
+          method : 'GET',
+        }); 
+      }
+    })
+    // Then save it to the cache
+    .then(function(result) {
+      return cache.set(url, result);
+    })
+    // Add it to the cache
+    .then(function() {
+      return cache.get(url);
+    })
+    // Finally process and return
+    .then(function(result) {
+      return {
+        params : params,
+        url : url,
+        result : JSON.parse(result.body),
+      };
+    });
 }
 
 
