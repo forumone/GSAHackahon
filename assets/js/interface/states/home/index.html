@@ -21,16 +21,13 @@
 					<strong>{{$chip.medicinalproduct}}</strong> </md-chip-template> </md-chips>
 
 					<div ng-switch="display">
-						<md-select ng-model="$parent.newDrug"
-							placeholder="Select a substance" ng-switch-when="substance">
-						<md-option ng-value="substance.substance_name"
-							ng-repeat="substance in substances">{{
-						substance.substance_name }}</md-option> </md-select>
+						<md-select ng-model="$parent.newDrug" placeholder="Select a substance" ng-switch-when="substance" class="md-primary md-hue-1">
+						  <md-option ng-value="substance.substance_name" ng-repeat="substance in substances">{{substance.substance_name}}</md-option> 
+						</md-select>
 
-						<md-select ng-model="$parent.newDrug" placeholder="Select a brand"
-							ng-switch-when="brand"> <md-option
-							ng-value="brand.brand_name" ng-repeat="brand in brands">{{
-						brand.brand_name }}</md-option> </md-select>
+						<md-select ng-model="$parent.newDrug" placeholder="Select a brand" ng-switch-when="brand"> 
+							<md-option ng-value="brand.brand_name" ng-repeat="brand in brands">{{brand.brand_name}}</md-option> 
+					  </md-select>
 					</div>
 					<md-button class="md-raised md-primary md-hue-3 add-drug"
 						ng-click="addDrug()" ng-disabled="drugs.length > 2">Add
@@ -38,11 +35,7 @@
 				</div>
 			</section>
 			<section flex="66" flex-sm="100">
-				<charts-bar yaxis-label="Number of Reported Instances" title="Adverse Events " height="400" width="500" data="data"></charts-bar>
-
-				<div ng-show="0 < data.length">
-					<a href="/definitions">How to read this chart</a>
-				</div>
+				<charts-bar yaxis-label="Number of Reported Instances" title="Adverse Events" height="400" width="500" data="data"></charts-bar>
 			</section>
 		</div>
 	</div>

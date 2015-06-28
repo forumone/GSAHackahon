@@ -15,7 +15,7 @@ angular.module('gsa18f').directive('chartsBar', function() {
       }).yAxis.tickFormat(d3.format(',d'));
 
       d3.select(element[0]).select("svg").remove();
-      svg = d3.select(element[0]).append("svg");
+      svg = d3.select(element.find("div")[0]).append("svg");
     } else {
       svg = d3.select(element.find("svg")[0]);
     }
@@ -42,6 +42,7 @@ angular.module('gsa18f').directive('chartsBar', function() {
       width : '@',
       xaxisLabel : '@',
       yaxisLabel : '@',
+      title : '@',
     },
     templateUrl : 'components/charts/bar/index.html',
     link : function(scope, element, attrs) {
@@ -53,7 +54,7 @@ angular.module('gsa18f').directive('chartsBar', function() {
         scope.width = 500;
       }
 
-      scope.$watch('height+width+data+xaxisLabel+yaxisLabel', function() {
+      scope.$watch('height+width+data+xaxisLabel+yaxisLabel+title', function() {
         scope.styles = {
           height : scope.height
         };
