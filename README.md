@@ -19,11 +19,7 @@ dCare includes the ability to show contradictors for several medications at the 
 | 3  | Understand what people need, by including people in the prototype design process |          |
 | 4  | Used at least three “human-centered design” techniques or tools |          |
 | 5  | Created or used a design style guide and/or a pattern library |          |
-| 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include:
--D3
--Angular
--SASS
--jQuerey |
+| 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include: D3, Angular, SASS, jQuerey |
 | 7  | Performed usability tests with people |          |
 | 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype |          |
 | 9  | Created a prototype that works on multiple devices and presents a responsive design |         |
