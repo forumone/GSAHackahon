@@ -11,8 +11,22 @@ dCare includes the ability to show contradictors for several medications at the 
 
 [Insert 750 words, covering use of Personas, Usability Tests, Scenarios, Use Cases, Open Source Front End Tools, interactive approach]
 
+##Design Criteria - Pool 1
+| #  | Criteria | Evidence |
+|----|----------|----------|
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted |          |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C |          |
+| 3  | Understand what people need, by including people in the prototype design process |          |
+| 4  | Used at least three “human-centered design” techniques or tools |          |
+| 5  | Created or used a design style guide and/or a pattern library |          |
+| 6  | Wsed at least three modern and open source frontend or client side web technologies |          |
+| 7  | Performed usability tests with people |          |
+| 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype |          |
+| 9  | Created a prototype that works on multiple devices and presents a responsive design |         |
+| 10 | Provided sufficient documentation to install and run their prototype on another machine |          |
+| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge |          |
 
-##Development Criteria
+##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
 | 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted |          |
