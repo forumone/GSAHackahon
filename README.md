@@ -14,23 +14,23 @@ dCare includes the ability to show contradictors for several medications at the 
 ##Design Criteria - Pool 1
 | #  | Criteria | Evidence |
 |----|----------|----------|
-| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted |          |
-| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C |          |
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
 | 3  | Understand what people need, by including people in the prototype design process |          |
 | 4  | Used at least three “human-centered design” techniques or tools |          |
 | 5  | Created or used a design style guide and/or a pattern library |          |
 | 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include: D3, Angular, SASS, jQuerey |
 | 7  | Performed usability tests with people |          |
-| 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype | [Trello Board](https://trello.com/b/nCt1b9Fg/18f-agile-bpa), [Sprint Reviews/Retrospectives] (https://docs.google.com/document/d/160VHp6qdKdgGAMgxQbAn5HhGSLXCIvcWZYdnE2SK8mM/edit?usp=sharing)         |
+| 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype | [Trello Board](https://trello.com/b/nCt1b9Fg/18f-agile-bpa), [Sprint Reviews/Retrospectives] (https://docs.google.com/document/d/160VHp6qdKdgGAMgxQbAn5HhGSLXCIvcWZYdnE2SK8mM/edit?usp=sharing) |
 | 9  | Created a prototype that works on multiple devices and presents a responsive design |         |
-| 10 | Provided sufficient documentation to install and run their prototype on another machine |          |
+| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F#web-starter-kit) |
 | 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge |          |
 
 ##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
-| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
-| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of two of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C |[link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of two of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C |   |
 | 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) |          |
 | 4  | Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider they used |          |
 | 5  | Wrote unit tests for their code |          |
