@@ -10,8 +10,8 @@ dCare includes the ability to show contradictors for several medications at the 
 ## Approach - Design Pool 
 
 ###Human-Centered Design
-As Forum One sought to build a tool that not only met the criteria of the Product Owner, but also the needs of end users, we employed various human-centered design techniques. During the first few sprints, our [design team](https://github.com/forumone/18F#team-and-labor-categories---design-pool) 
-insert content
+As Forum One sought to build a tool that not only met the criteria of the Product Owner, but also the needs of end users, we employed various human-centered design techniques. We started by taking a page from the [Digital Services Playbook](https://playbook.cio.gov/#play1) on understanding what people need. During the first few sprints, our [design team](https://github.com/forumone/18F#team-and-labor-categories---design-pool) began researching the needs of potential end users, developing [personas, scenarios, and use cases](https://docs.google.com/document/d/11pnSJxqw-JNx2jYmWZJdVtUb0cXUE3tsB6qXkKOH60k/edit#). While we interviewed potential users, we quickly relayed the information to the design team, who, alongside the designated Product Owner, worked to wireframe a solution. 
+
 
 [Insert 750 words, covering use of Personas, Usability Tests, Scenarios, Use Cases, Open Source Front End Tools, interactive approach]
 
