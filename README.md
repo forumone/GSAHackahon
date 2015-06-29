@@ -10,7 +10,7 @@ dCare includes the ability to show contradictors for several medications at the 
 ## Approach - Design Pool 
 
 ###Human-Centered Design
-
+As Forum One sought to build a tool that not only met the criteria of the Product Owner, but also the needs of end users, we employed various human-centered design techniques. During the first few sprints, our [design team](https://github.com/forumone/18F#team-and-labor-categories---design-pool) 
 insert content
 
 [Insert 750 words, covering use of Personas, Usability Tests, Scenarios, Use Cases, Open Source Front End Tools, interactive approach]
@@ -21,7 +21,7 @@ insert content
 | 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
 | 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
 | 3  | Understand what people need, by including people in the prototype design process |          |
-| 4  | Used at least three “human-centered design” techniques or tools |          |
+| 4  | Used at least three “human-centered design” techniques or tools | [link](https://docs.google.com/document/d/11pnSJxqw-JNx2jYmWZJdVtUb0cXUE3tsB6qXkKOH60k/edit#) |
 | 5  | Created or used a design style guide and/or a pattern library |          |
 | 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include: D3, Angular, SASS, jQuerey |
 | 7  | Performed usability tests with people |          |
