@@ -20,7 +20,7 @@ insert content
 |----|----------|----------|
 | 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
 | 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
-| 3  | Understand what people need, by including people in the prototype design process |          |
+| 3  | Understand what people need, by including people in the prototype design process | [link](https://docs.google.com/document/d/11pnSJxqw-JNx2jYmWZJdVtUb0cXUE3tsB6qXkKOH60k/edit#) |
 | 4  | Used at least three “human-centered design” techniques or tools | [link](https://docs.google.com/document/d/11pnSJxqw-JNx2jYmWZJdVtUb0cXUE3tsB6qXkKOH60k/edit#) |
 | 5  | Created or used a design style guide and/or a pattern library |          |
 | 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include: D3, Angular, SASS, jQuerey |
