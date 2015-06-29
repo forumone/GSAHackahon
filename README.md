@@ -19,7 +19,11 @@ dCare includes the ability to show contradictors for several medications at the 
 | 3  | Understand what people need, by including people in the prototype design process |          |
 | 4  | Used at least three “human-centered design” techniques or tools |          |
 | 5  | Created or used a design style guide and/or a pattern library |          |
-| 6  | Wsed at least three modern and open source frontend or client side web technologies |          |
+| 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include:
+-D3
+-Angular
+-SASS
+-jQuerey |
 | 7  | Performed usability tests with people |          |
 | 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype |          |
 | 9  | Created a prototype that works on multiple devices and presents a responsive design |         |
@@ -29,8 +33,8 @@ dCare includes the ability to show contradictors for several medications at the 
 ##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
-| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted |          |
-| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of two of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C |          |
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of two of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C |[link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
 | 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) |          |
 | 4  | Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider they used |          |
 | 5  | Wrote unit tests for their code |          |
