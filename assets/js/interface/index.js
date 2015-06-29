@@ -1,7 +1,5 @@
 var gsa18f = angular.module('gsa18f', [ 'ngRoute', 'ui.router', 'ngMaterial']);
 gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $mdThemingProvider) {
-  // $locationProvider.html5Mode(true);
-
   $urlRouterProvider.otherwise('/');
   
   var dCarePalette = $mdThemingProvider.extendPalette('cyan', {
@@ -17,24 +15,6 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
     .primaryPalette('dCarePalette')
     .accentPalette('grey');
   
-  
-//  $mdThemingProvider.definePalette('dCarePalette', {
-//    '50' : '1daaf1',
-//    '100' : '1daaf1',
-//    '200' : '1daaf1',
-//    '300' : '1daaf1',
-//    '400' : '1daaf1',
-//    '500' : 'ffffff',
-//    '600' : '1daaf1',
-//    '700' : '1daaf1',
-//    '800' : 'c9c7c8',
-//    '900' : '1daaf1',
-//    'A100' : 'eb2e80',
-//    'A200' : '1daaf1',
-//    'A400' : '1daaf1',
-//    'A700' : '1daaf1',
-//  });
-
   $stateProvider
   // Home page
   .state('home', {
@@ -65,4 +45,20 @@ gsa18f.constant('DrugSeriousness', {
   seriousnesshospitalization : "Hospitalization",
   seriousnesslifethreatening : "Life-threatening",
   seriousnessother : "Other Serious"
+});
+
+gsa18f.run(function($rootScope, $window) {
+  $rootScope.tab = ('/about' == $window.location.pathname.substring(0, 6)) ? 1 : 0;
+  
+  $rootScope.goAbout = function() {
+    if (1 != $rootScope.tab) {
+      $window.location = '/about/#/';
+    }
+  };
+  
+  $rootScope.goApp = function() {
+    if (0 != $rootScope.tab) {
+      $window.location = '/#/';
+    }
+  };
 });

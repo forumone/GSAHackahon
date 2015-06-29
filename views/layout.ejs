@@ -30,11 +30,11 @@
       <div layout="row" layout-margin>
         <div class="logo"><img src="/images/dcare-logo.svg" height="44" width="143" /></div>
         <div flex class="tabs">
-          <md-tabs>
-            <md-tab>
+          <md-tabs md-selected="tab">
+            <md-tab md-on-select="goApp()">
               <h3>Data Viewer</h3>
             </md-tab>
-            <md-tab>
+            <md-tab md-on-select="goAbout()">
               <h3>About</h3>
             </md-tab>
           </md-tabs>
