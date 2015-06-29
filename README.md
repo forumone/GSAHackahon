@@ -9,6 +9,10 @@ dCare includes the ability to show contradictors for several medications at the 
 
 ## Approach - Design Pool 
 
+###Human-Centered Design
+
+insert content
+
 [Insert 750 words, covering use of Personas, Usability Tests, Scenarios, Use Cases, Open Source Front End Tools, interactive approach]
 
 ##Design Criteria - Pool 1
