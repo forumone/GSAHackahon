@@ -49,15 +49,16 @@ gsa18f.constant('DrugSeriousness', {
 
 gsa18f.run(function($rootScope, $window) {
   $rootScope.tab = ('/about' == $window.location.pathname.substring(0, 6)) ? 1 : 0;
-  
+  $rootScope.windowTab = $rootScope.tab;
+
   $rootScope.goAbout = function() {
-    if (1 != $rootScope.tab) {
+    if (1 != $rootScope.windowTab) {
       $window.location = '/about/#/';
     }
   };
   
   $rootScope.goApp = function() {
-    if (0 != $rootScope.tab) {
+    if (0 != $rootScope.windowTab) {
       $window.location = '/#/';
     }
   };
