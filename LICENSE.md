@@ -2,26 +2,18 @@ Licensing:
 
 dCare is being released under the MIT License, however, we used several tools in creating dCare.  The licenses for those tools are listed here.  View our full license at the bottom of this document.
 
-* [Capistrano MIT License] (https://github.com/capistrano/capistrano/blob/master/LICENSE.txt)
-* [Sails MIT License] (https://github.com/balderdashy/sails/blob/master/LICENSE.md_
-* D3 BSD License
-https://github.com/mbostock/d3/blob/master/LICENSE
-* AngularJS MIT License
-https://github.com/angular/angular.js/blob/master/LICENSE
-* Lodash MIT License
-https://github.com/lodash/lodash/blob/master/LICENSE
-* jQuery MIT License
-https://github.com/jquery/jquery-license/blob/master/LICENSE.txt
-* Grunt MIT License
-https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
-* SASS MIT License
-http://sass-lang.com/documentation/file.MIT-LICENSE.html
-* Bower MIT License
-https://github.com/bower/bower/blob/master/LICENSE
-* NPM Artistic License 2.0
-https://github.com/npm/npm/blob/master/LICENSE
+* [Capistrano MIT License](https://github.com/capistrano/capistrano/blob/master/LICENSE.txt)
+* [Sails MIT License](https://github.com/balderdashy/sails/blob/master/LICENSE.md)
+* [D3 BSD License](https://github.com/mbostock/d3/blob/master/LICENSE)
+* [AngularJS MIT License](https://github.com/angular/angular.js/blob/master/LICENSE)
+* [Lodash MIT License](https://github.com/lodash/lodash/blob/master/LICENSE)
+* [jQuery MIT License](https://github.com/jquery/jquery-license/blob/master/LICENSE.txt)
+* [Grunt MIT License](https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT)
+* [SASS MIT License[(http://sass-lang.com/documentation/file.MIT-LICENSE.html)
+* [Bower MIT License](https://github.com/bower/bower/blob/master/LICENSE)
+* [NPM Artistic License 2.0](https://github.com/npm/npm/blob/master/LICENSE)
 * node.js MIT License, with bundled other licenses.
-Please read full license agreement for node.js to understand full licensing full details:https://github.com/joyent/node/blob/master/LICENSE
+[Please read full license agreement for node.js to understand full licensing full details](https://github.com/joyent/node/blob/master/LICENSE)
 
 dCARE MIT Lincense
 
