@@ -35,7 +35,7 @@ A large component of our ability to stay lean and develop fast came from the use
 | 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype | [Trello Board](https://trello.com/b/nCt1b9Fg/18f-agile-bpa), [Sprint Reviews/Retrospectives] (https://docs.google.com/document/d/160VHp6qdKdgGAMgxQbAn5HhGSLXCIvcWZYdnE2SK8mM/edit?usp=sharing) |
 | 9  | Created a prototype that works on multiple devices and presents a responsive design |         |
 | 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F#web-starter-kit) |
-| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge |          |
+| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link](https://github.com/forumone/18F/blob/master/LICENSE.md) |
 
 ##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
