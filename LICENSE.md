@@ -9,7 +9,7 @@ dCare is being released under the MIT License, however, we used several tools in
 * [Lodash MIT License](https://github.com/lodash/lodash/blob/master/LICENSE)
 * [jQuery MIT License](https://github.com/jquery/jquery-license/blob/master/LICENSE.txt)
 * [Grunt MIT License](https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT)
-* [SASS MIT License[(http://sass-lang.com/documentation/file.MIT-LICENSE.html)
+* [SASS MIT License](http://sass-lang.com/documentation/file.MIT-LICENSE.html)
 * [Bower MIT License](https://github.com/bower/bower/blob/master/LICENSE)
 * [NPM Artistic License 2.0](https://github.com/npm/npm/blob/master/LICENSE)
 * node.js MIT License, with bundled other licenses.
