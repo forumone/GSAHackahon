@@ -2,10 +2,8 @@ Licensing:
 
 dCare is being released under the MIT License, however, we used several tools in creating dCare.  The licenses for those tools are listed here.  View our full license at the bottom of this document.
 
-* Capistrano MIT License
-https://github.com/capistrano/capistrano/blob/master/LICENSE.txt
-* Sails MIT License
-https://github.com/balderdashy/sails/blob/master/LICENSE.md
+* [Capistrano MIT License] (https://github.com/capistrano/capistrano/blob/master/LICENSE.txt)
+* [Sails MIT License] (https://github.com/balderdashy/sails/blob/master/LICENSE.md_
 * D3 BSD License
 https://github.com/mbostock/d3/blob/master/LICENSE
 * AngularJS MIT License
