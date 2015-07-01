@@ -31,33 +31,12 @@ function apiQuery(endpoint, params) {
   
   var url = "https://api.fda.gov/drug/" + endpoint + parameters.serialize(params);
   
-  // Try the cache first
-  return cache.get(url)
-    .then(function(result) {
-      if (result) {
-        return result;
-      }
-      else {
-        // If that fails load it from the request imiter
-        return limiter.request({
-          url : url,
-          method : 'GET',
-        }); 
-      }
-    })
-    // Then save it to the cache
-    .then(function(result) {
-      return cache.set(url, result);
-    })
-    // Add it to the cache
-    .then(function() {
-      return cache.get(url);
-    })
-    // Finally process and return
+  return sails.services.cachedrequest.query(url, limiter)
+    // Process the results
     .then(function(result) {
       return {
-        params : params,
         url : url,
+        params : params,
         result : JSON.parse(result.body),
       };
     });
@@ -71,12 +50,9 @@ function apiQuery(endpoint, params) {
  * In the future this could be cached or other value added.
  */
 function apiProxy(req, res) {
-  this.apiQuery(req.params.endpoint, req.query)
+  apiQuery(req.params.endpoint, req.query)
   .then(function(result) {
-
-    var output = JSON.parse(result.result);
-
-    return res.json(output);
+    return res.json(result.result);
   })
   .catch(function(err) {
     res.serverError('An error occurred');
@@ -109,7 +85,7 @@ function drugEvents(req, res) {
                            'seriousnesslifethreatening', 
                            'seriousnessother'], 
       function(seriousness) {
-        return this.apiQuery('event.json', {
+        return apiQuery('event.json', {
           search : '(' + search.join(' AND ') + ')',
           count : seriousness,
         })
@@ -157,6 +133,5 @@ function drugEvents(req, res) {
 
 module.exports = {
   apiProxy : apiProxy,
-  drugEvents : drugEvents,
-  apiQuery : apiQuery,
+  drugEvents : drugEvents
 };
