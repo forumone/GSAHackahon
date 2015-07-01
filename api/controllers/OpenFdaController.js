@@ -71,14 +71,15 @@ function apiQuery(endpoint, params) {
  * In the future this could be cached or other value added.
  */
 function apiProxy(req, res) {
-  apiQuery(req.params.endpoint, req.query)
+  this.apiQuery(req.params.endpoint, req.query)
   .then(function(result) {
+
     var output = JSON.parse(result.result);
+
     return res.json(output);
   })
   .catch(function(err) {
-    sails.log.error(err);
-    res.serverError();
+    res.serverError('An error occurred');
   });
 }
 
@@ -108,7 +109,7 @@ function drugEvents(req, res) {
                            'seriousnesslifethreatening', 
                            'seriousnessother'], 
       function(seriousness) {
-        return apiQuery('event.json', {
+        return this.apiQuery('event.json', {
           search : '(' + search.join(' AND ') + ')',
           count : seriousness,
         })
@@ -157,4 +158,5 @@ function drugEvents(req, res) {
 module.exports = {
   apiProxy : apiProxy,
   drugEvents : drugEvents,
+  apiQuery : apiQuery,
 };
