@@ -6,6 +6,7 @@ module.exports = function (grunt) {
                 coverage_folder: 'coverage',
                 mask: '**/*.spec.js',
                 root: 'api/',
+                reportFormats: ['cobertura','lcovonly']
             }
         }
     });
