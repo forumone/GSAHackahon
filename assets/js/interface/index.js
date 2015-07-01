@@ -28,6 +28,9 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
       },
       display : {
         value : 'brand'
+      },
+      tabIndex : {
+        value : 0
       }
     }
   })
@@ -35,6 +38,19 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
     url : '/drug/:id',
     templateUrl : 'states/drug/index.html',
     controller : 'DrugController'
+  })
+  .state('about', {
+    url : '/about',
+    templateUrl : 'states/page/index.html',
+    controller : 'PageController',
+    params : {
+      page : {
+        value : 'about'
+      },
+      tabIndex : {
+        value : 1
+      }
+    }
   });
 });
 
@@ -47,19 +63,12 @@ gsa18f.constant('DrugSeriousness', {
   seriousnessother : "Other Serious"
 });
 
-gsa18f.run(function($rootScope, $window) {
-  $rootScope.tab = ('/about' == $window.location.pathname.substring(0, 6)) ? 1 : 0;
-  $rootScope.windowTab = $rootScope.tab;
-
-  $rootScope.goAbout = function() {
-    if (1 != $rootScope.windowTab) {
-      $window.location = '/about/#/';
-    }
-  };
+gsa18f.run(function($rootScope, $state, $stateParams) {
+  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $rootScope.tabIndex = $stateParams.tabIndex;
+  });
   
-  $rootScope.goApp = function() {
-    if (0 != $rootScope.windowTab) {
-      $window.location = '/#/';
-    }
-  };
+  $rootScope.goState = function(state) {
+    $state.go(state);
+  }
 });

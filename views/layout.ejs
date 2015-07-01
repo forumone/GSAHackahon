@@ -30,11 +30,11 @@
       <div layout="row" layout-margin>
         <div class="logo"><img src="/images/dcare-logo.svg" height="44" width="143" /></div>
         <div flex class="tabs">
-          <md-tabs md-selected="tab">
-            <md-tab md-on-select="goApp()">
+          <md-tabs md-selected="tabIndex">
+            <md-tab md-on-select="goState('home')">
               <h3>Data Viewer</h3>
             </md-tab>
-            <md-tab md-on-select="goAbout()">
+            <md-tab md-on-select="goState('about')">
               <h3>About</h3>
             </md-tab>
           </md-tabs>
@@ -77,8 +77,10 @@
     <script src="/js/interface/components/pager/index.js"></script>
     <script src="/js/interface/services/fda/label.js"></script>
     <script src="/js/interface/services/substances/index.js"></script>
+    <script src="/js/interface/states/about/index.js"></script>
     <script src="/js/interface/states/drug/index.js"></script>
     <script src="/js/interface/states/home/index.js"></script>
     <script src="/js/interface/states/home/loading.js"></script>
+    <script src="/js/interface/states/page/index.js"></script>
     <!--SCRIPTS END-->
 </html>
