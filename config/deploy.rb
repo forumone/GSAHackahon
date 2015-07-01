@@ -2,7 +2,7 @@
 set :application, 'gsa18f'
 
 # The repo URL
-set :repo_url, 'git@github.com:forumone/18F.git'
+set :repo_url, 'git@github.com:forumone/18F-ADSBPA-Pool-2-Dev-.git'
 
 # Or use the line below to deploy via rsync
 set :scm, :rsync

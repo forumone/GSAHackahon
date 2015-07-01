@@ -11,9 +11,9 @@
  */
 
 module.exports = {
-  proxyHost : 'agilebpa.forumone.com',
+  proxyHost : 'agilebpadevpool.forumone.com',
   proxyPort : '80',
-  port : 2817,
+  port : 2818,
   
   /***************************************************************************
    * Set the default database connection for models in the development       *

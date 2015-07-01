@@ -2,7 +2,7 @@
 set :stage, :dev
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{agilebpa.forumone.com}
+set :site_url, %w{agilebpadevpool.forumone.com}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{}
@@ -11,7 +11,7 @@ set :site_folder, %w{}
 set :webroot, 'public'
 
 # The path to the project on the server
-set :deploy_to, '/var/www/vhosts/agilebpa.www'
+set :deploy_to, '/var/www/vhosts/agilebpadevpool.www'
 
 # Where the temporary directory is
 set :tmp_dir, fetch(:deploy_to)
@@ -24,9 +24,9 @@ set :branch, "master"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{agilebpa@prod.forumone.com}, :primary => true
-role :web, %w{agilebpa@prod.forumone.com}
-role :db,  %w{agilebpa@prod.forumone.com}
+role :app, %w{agilebpadevpool@prod.forumone.com}, :primary => true
+role :web, %w{agilebpadevpool@prod.forumone.com}
+role :db,  %w{agilebpadevpool@prod.forumone.com}
 
 # Extended Server Syntax
 # ======================
