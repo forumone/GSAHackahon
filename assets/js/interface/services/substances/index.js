@@ -19,8 +19,20 @@ angular.module('gsa18f').service('substances', function($http) {
     });
   }
   
+  function getBrandsLike(like, limit) {
+    limit = limit || 10;
+    
+    return $http.get('/api/drugs', {
+      params : {
+        limit : limit,
+        like : like,
+      }
+    });
+  }
+  
   return {
     getSubstances : getSubstances,
-    getBrands : getBrands
+    getBrands : getBrands,
+    getBrandsLike : getBrandsLike
   }
 });

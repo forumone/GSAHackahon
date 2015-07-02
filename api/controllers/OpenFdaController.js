@@ -59,79 +59,37 @@ function apiProxy(req, res) {
   });
 }
 
-/**
- * Retrieve events for drug combinations
- */
-function drugEvents(req, res) {
-  var drugs = req.query.drug || [];
+function getDrugs(req, res) {
+  var params = parameters.getQueryParams(req, [ 'limit', 'offset', 'like' ], { 
+    limit : 50, 
+    offset : 0,
+    like : '',
+  });
   
-  if (!_.isArray(drugs)) {
-    drugs = [drugs];
-  }
-  
-  if (0 < drugs.length) {
-    var combos = combinations.getCombinations(drugs);
-    var promises = _.chain(combos)
-    .map(function(combo) {
-      var search = _.map(combo, function(product) {
-        return 'medicinalproduct:"' + product + '"';
-      });
-      
-      var queries = _.map([
-                           'seriousnesscongenitalanomali', 
-                           'seriousnessdeath', 
-                           'seriousnessdisabling', 
-                           'seriousnesshospitalization', 
-                           'seriousnesslifethreatening', 
-                           'seriousnessother'], 
-      function(seriousness) {
-        return apiQuery('event.json', {
-          search : '(' + search.join(' AND ') + ')',
-          count : seriousness,
-        })
-        .then(function(result) {
-          result.search = search;
-          result.combo = combo;
-          return result;
-        });
-      });
-      return queries;
-    })
-    .flatten()
-    .value();
+  Promise.bind({}).then(function() {
+    return drugsDb.connect()
+  })
+  .then(function(db) {
+    this.db = db;
     
-    Promise.all(promises)
-    .then(function(results) {
-      var drugResults = _.chain(results)
-      .map(function(result) {
-        var count = 0;
-        
-        if (_.has(result.result, 'results')) {
-          var counts = result.result.results.shift();
-          count = counts.count;
-        }
-        
-        return {
-          drugs : result.combo,
-          seriousness : result.params.count,
-          count : count,
-        };
-      })
-      .value();
-      
-      return res.json(drugResults);
-    })
-    .catch(function(err) {
-      sails.log.error(err);
-      return res.serverError();
-    })
-  }
-  else {
-    return res.notFound();
-  }
+    var query_params = {
+      $limit : params.limit,
+      $offset : params.offset,
+      $like : params.like + '%',
+    };
+    
+    return db.all('SELECT brand_name, generic_name FROM Products WHERE brand_name LIKE $like ORDER BY brand_name ASC LIMIT $limit OFFSET $offset', query_params);
+  })
+  .then(function(rows) {
+    return res.json(rows);
+  })
+  .catch(function(err) {
+    sails.log.error(err);
+    res.serverError('An error occurred');
+  });
 }
 
 module.exports = {
   apiProxy : apiProxy,
-  drugEvents : drugEvents
+  getDrugs : getDrugs
 };
