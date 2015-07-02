@@ -56,6 +56,8 @@
     "mocha": "^2.2.5",
     "phantomjs": "^1.9.17",
     "sinon": "^1.15.3",
-    "sinon-as-promised": "^4.0.0"
+    "sinon-as-promised": "^4.0.0",
+    "d3": "^3.5.5",
+    "sqlite3": "^3.0.8"
   }
 }
