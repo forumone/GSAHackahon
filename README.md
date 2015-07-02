@@ -1,5 +1,5 @@
 #ADS RFQ Pool One Development
-Prototype URL: [http://http://agilebpadevpool.forumone.com](http://http://agilebpadevpool.forumone.com).
+Prototype URL: [http://http://agilebpadevpool.forumone.com](http://agilebpadevpool.forumone.com).
 
 ## Description
 
@@ -7,7 +7,7 @@ dCARE is a tool that enables physicians, pharmacists, nurses, patients and care 
 
 dCare includes the ability to show contradictors for several medications at the same time. It is based on official FDA data, and reduces the research time substantially. You can track our progress on our [trello board.](https://trello.com/b/nCt1b9Fg/18f-agile-bpa)
 
-## Approach - Design Pool 
+## Approach - Development Pool 
 
 
 ###Using Open-source Technologies
