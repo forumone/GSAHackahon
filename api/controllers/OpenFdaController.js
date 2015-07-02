@@ -42,8 +42,6 @@ function apiQuery(endpoint, params) {
     });
 }
 
-
-
 /**
  * Proxies a request from the app to the openFDA API.
  * 
@@ -59,37 +57,7 @@ function apiProxy(req, res) {
   });
 }
 
-function getDrugs(req, res) {
-  var params = parameters.getQueryParams(req, [ 'limit', 'offset', 'like' ], { 
-    limit : 50, 
-    offset : 0,
-    like : '',
-  });
-  
-  Promise.bind({}).then(function() {
-    return drugsDb.connect()
-  })
-  .then(function(db) {
-    this.db = db;
-    
-    var query_params = {
-      $limit : params.limit,
-      $offset : params.offset,
-      $like : params.like + '%',
-    };
-    
-    return db.all('SELECT brand_name, generic_name FROM Products WHERE brand_name LIKE $like ORDER BY brand_name ASC LIMIT $limit OFFSET $offset', query_params);
-  })
-  .then(function(rows) {
-    return res.json(rows);
-  })
-  .catch(function(err) {
-    sails.log.error(err);
-    res.serverError('An error occurred');
-  });
-}
 
 module.exports = {
-  apiProxy : apiProxy,
-  getDrugs : getDrugs
+  apiProxy : apiProxy
 };

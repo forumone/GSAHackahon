@@ -8,49 +8,78 @@
 var _ = require('lodash');
 var fs = require('fs');
 var path = require('path');
+var Promise = require('bluebird');
 
 /**
- * Sends an arbitrary file from the public files
- * 
- * @param filename
+ * Returns a list of brands like the provided value
+ * @param req
  * @param res
+ * @returns
  */
-function sendJsonFile(filename, res) {
-  var file = path.resolve(__dirname, '../../.tmp/public/files/' + filename);
-  fs.exists(file, function (exists) {
-    if (!exists) {
-      return res.notFound('The requested file does not exist.');
-    }
-
-    fs.readFile(file, 'utf8', function(err, data) {
-      if (err) {
-        return res.notFound('The requested file does not exist.');
-      }
-      
-      var json = JSON.parse(data);
-      return res.json(json);
-    });
+function getBrands(req, res) {
+  var params = parameters.getQueryParams(req, [ 'limit', 'offset', 'like' ], { 
+    limit : 50, 
+    offset : 0,
+    like : '',
+  });
+  
+  Promise.bind({}).then(function() {
+    return drugsDb.connect()
+  })
+  .then(function(db) {
+    this.db = db;
+    
+    var query_params = {
+      $limit : params.limit,
+      $offset : params.offset,
+      $like : params.like + '%',
+    };
+    
+    return db.all('SELECT brand_name, generic_name FROM Products WHERE brand_name LIKE $like ORDER BY brand_name ASC LIMIT $limit OFFSET $offset', query_params);
+  })
+  .then(function(rows) {
+    return res.json(rows);
+  })
+  .catch(function(err) {
+    sails.log.error(err);
+    res.serverError('An error occurred');
   });
 }
 
 /**
- * Send list of substances
- * 
+ * Returns a list of substances like the provided value
  * @param req
  * @param res
+ * @returns
  */
 function getSubstances(req, res) {
-  return sendJsonFile('substances.json', res);
-}
-
-/**
- * Send list of brands
- * 
- * @param req
- * @param res
- */
-function getBrands(req, res) {
-  return sendJsonFile('brands.json', res);
+  var params = parameters.getQueryParams(req, [ 'limit', 'offset', 'like' ], { 
+    limit : 50, 
+    offset : 0,
+    like : '',
+  });
+  
+  Promise.bind({}).then(function() {
+    return drugsDb.connect()
+  })
+  .then(function(db) {
+    this.db = db;
+    
+    var query_params = {
+      $limit : params.limit,
+      $offset : params.offset,
+      $like : params.like + '%',
+    };
+    
+    return db.all('SELECT brand_name, generic_name FROM Products WHERE generic_name LIKE $like ORDER BY brand_name ASC LIMIT $limit OFFSET $offset', query_params);
+  })
+  .then(function(rows) {
+    return res.json(rows);
+  })
+  .catch(function(err) {
+    sails.log.error(err);
+    res.serverError('An error occurred');
+  });
 }
 
 module.exports = {

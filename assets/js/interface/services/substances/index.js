@@ -1,28 +1,26 @@
 angular.module('gsa18f').service('substances', function($http) {
-  /**
-   * Returns a list of mental health substances
-   */
-  function getSubstances(id) {
-    return $http.get('/api/substances/substances')
-    .then(function(result) {
-      return result.data;
-    });
-  }
   
   /**
-   * Returns a list of mental health brands
+   * Returns a list of substances
    */
-  function getBrands() {
-    return $http.get('/api/substances/brands')
-    .then(function(result) {
-      return result.data;
-    });
-  }
-  
-  function getBrandsLike(like, limit) {
+  function getBrands(like, limit) {
     limit = limit || 10;
     
-    return $http.get('/api/drugs', {
+    return $http.get('/api/substances/brands', {
+      params : {
+        limit : limit,
+        like : like,
+      }
+    });
+  }
+  
+  /**
+   * Returns a list of substances
+   */
+  function getSubstances(like, limit) {
+    limit = limit || 10;
+    
+    return $http.get('/api/substances/substances', {
       params : {
         limit : limit,
         like : like,
@@ -33,6 +31,5 @@ angular.module('gsa18f').service('substances', function($http) {
   return {
     getSubstances : getSubstances,
     getBrands : getBrands,
-    getBrandsLike : getBrandsLike
   }
 });

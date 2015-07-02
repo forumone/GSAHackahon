@@ -1,17 +1,35 @@
 <div class="application">
-	<div class="layout-constrain" layout="column">
-		<h1 class="md-toolbar-tools header">Drug Contraindication Adverse
-			Reaction Evaluator (dCARE)</h1>
-		<div class="md-whiteframe-z3" layout="column">
-		  <md-autocomplete 
-		    md-selected-item="selectedItem" 
-		    md-search-text="searchText"  
-		    md-items="item in querySearch(searchText)"
-		    md-item-text="item.brand_name"
-		    md-min-length="1"
-		    placeholder="Find your drug">
-		    <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.brand_name}}</span>
-		  </md-autocomplete>
-		</div>
-	</div>
+  <div class="layout-constrain" layout="column">
+    <h1 class="md-toolbar-tools header">Drug Contraindication Adverse
+      Reaction Evaluator (dCARE)</h1>
+    <div class="md-whiteframe-z3" layout="row" layout-sm="column">
+      <section flex="33" flex-sm="100" class="controls">
+        <div class="md-hue-1"> 
+          <md-toolbar class="md-hue-1">
+            <h2 class="md-toolbar-tools"><span>Choose Drugs to View</span></h2>
+          </md-toolbar> 
+        <div layout="column" layout-margin>
+          <p>Combine multiple drugs to find adverse reactions</p>
+
+          <md-chips ng-model="drugs" readonly=isReadOnly> <md-chip-template>
+          <strong>{{$chip.brand_name}}</strong> </md-chip-template> </md-chips>
+
+          <md-autocomplete 
+		        md-selected-item="selectedItem" 
+		        md-search-text="searchText"  
+		        md-items="item in querySearch(searchText)"
+		        md-item-text="item.brand_name"
+		        md-min-length="1"
+		        placeholder="Find your drug">
+		        <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.brand_name}}</span>
+		      </md-autocomplete>
+		      
+          <md-button class="md-raised md-primary md-hue-2 add-drug" ng-click="addDrug()" ng-disabled="!selectedItem">Add drug</md-button>
+        </div>
+      </section>
+      <section flex="66" flex-sm="100">
+        
+      </section>
+    </div>
+  </div>
 </div>
