@@ -1,5 +1,5 @@
 #ADS RFQ Pool One Development
-Prototype URL: [http://http://agilebpadevpool.forumone.com](http://agilebpadevpool.forumone.com).
+Prototype URL: [http://agilebpadevpool.forumone.com](http://agilebpadevpool.forumone.com).
 
 ## Description
 
@@ -14,7 +14,7 @@ dCare includes the ability to show contradictors for several medications at the 
 A large component of our ability to stay lean and develop fast came from the use of [open-soruce technologies](https://playbook.cio.gov/#play8). Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. 
 
 
-##Design Criteria - Pool 1
+##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
 | 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
@@ -29,7 +29,7 @@ A large component of our ability to stay lean and develop fast came from the use
 | 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F#web-starter-kit) |
 | 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link](https://github.com/forumone/18F/blob/master/LICENSE.md) |
 
-## Team and Labor Categories - Design Pool
+## Team and Labor Categories - Development Pool
 | Role  | Bio | Responsibility | LOE |
 |----|----------|----------|----|
 | Product Manager - Eric Davis | xxxxx | Eric Davis has authority and responsibility over the quality of the submitted prototype. | xx hours |
