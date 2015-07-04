@@ -51,7 +51,6 @@ angular.module('gsa18f').controller('HomeController', function($scope, $statePar
             };
           });
           
-          console.log(data);
           $scope.data = data;
           
           $mdToast.hide();
