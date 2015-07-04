@@ -28,7 +28,13 @@
         </div>
       </section>
       <section flex="66" flex-sm="100">
-        
+        <charts-line 
+          yaxis-label="Number of Reported Instances" 
+          title="Adverse Events per Month" 
+          height="400" 
+          width="500" 
+          data="data"
+          ng-show="0 < drugs.length"></charts-bar>
       </section>
     </div>
   </div>

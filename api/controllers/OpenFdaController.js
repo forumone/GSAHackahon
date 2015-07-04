@@ -57,7 +57,84 @@ function apiProxy(req, res) {
   });
 }
 
+/**
+ * Gets event dates from the openFDA API
+ */
+function eventDates(req, res) {
+  var drugs = req.query.drug || [];
+  
+  if (!_.isArray(drugs)) {
+    drugs = [drugs];
+  }
+  
+  var promises = [ ];
+  
+  if (0 < drugs.length) {
+    var combos = combinations.getCombinations(drugs);
+    
+    promises = _.chain(combos)
+    .map(function(combo) {
+      var search = _.map(combo, function(product) {
+        return 'medicinalproduct:"' + product + '"';
+      });
+      
+      return apiQuery('event.json', {
+        search : '(' + search.join(' AND ') + ')',
+        count : 'receivedate',
+      })
+      .then(function(result) {
+        result.search = search;
+        result.combo = combo.join(' and ');
+        return result;
+      });
+    })
+    .flatten()
+    .value();
+  }
+  
+  Promise.all(promises)
+  .then(function(results) {
+    var dates = _.chain(results)
+      .map(function(result) {
+        return {
+          drug : result.combo,
+          dates : combineDates(result.result.results)
+        }
+      })
+      .value();
+    
+    return res.json(dates);
+  })
+  .catch(function(err) {
+    sails.log.error(err);
+    return res.serverError();
+  });
+}
+
+/**
+ * Combines daily values into months
+ */
+function combineDates(results) {
+  var months = _.reduce(results, function(result, n) {
+    var year = n.time.substring(0, 4);
+    var month = n.time.substring(4, 6);
+    var day = n.time.substring(6, 8);
+
+    var date = Date.parse(year + '-' + month + '-15');
+    
+    if (!_.has(result, date)) {
+      result[date] = 0;
+    }
+    
+    result[date] += parseInt(n.count);
+    
+    return result;
+  }, {});
+  
+  return months;
+}
 
 module.exports = {
-  apiProxy : apiProxy
+  apiProxy : apiProxy,
+  eventDates : eventDates
 };
