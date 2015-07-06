@@ -17,8 +17,10 @@ Whether large or small, any projects will likely require over a thousand deploym
 - Significantly increases the confidence we have that the code we push will be deployed the exact same way each time.
 - Allows our team to recover a previously-known good version of code if for some reason something does fail. This can take place regardless of how many code commits have happened since.
 
-##Infrastructure as a Service
-Forum One designed and built the dCareHx tool on Amazon's popular EC2 Infrastructure as a Service. The prototype is deployed on an Amazon EC2 Linux Cloud Server. 
+##Infrastructure as a Service and Hosting Environment
+Forum One designed and built the dCareHx tool on Amazon's popular EC2 Infrastructure as a Service. The prototype is deployed on an Amazon EC2 Linux Cloud Server.
+c3.large instance
+Linux
 
 ##Continuous Monitoring
 The prototype tool is hosted on Amazon EC2 and monitored and maintained by a set of tools. The instrumentation provides insight into node status, comment modifications, cron age, system maintenance activity, search API queue status, enabled modules and sensors, module updates, user activity (login, logout, sessions), dblog (per severity), HTTP error messages, and much more. 
@@ -26,4 +28,5 @@ The prototype tool is hosted on Amazon EC2 and monitored and maintained by a set
 - HTTP and Server Health Monitor: Monitis (monitis.com)
 - On-call rotation: PagerDuty 
 - Centralized application/server logging: Graylog
-- Amazon CloudWatch 
+- Amazon CloudWatch: 
+- New Relic: 
