@@ -22,3 +22,8 @@ Forum One designed and built the dCareHx tool on Amazon's popular EC2 Infrastruc
 
 ##Continuous Monitoring
 The prototype tool is hosted on Amazon EC2 and monitored and maintained by a set of tools. The instrumentation provides insight into node status, comment modifications, cron age, system maintenance activity, search API queue status, enabled modules and sensors, module updates, user activity (login, logout, sessions), dblog (per severity), HTTP error messages, and much more. 
+
+- HTTP and Server Health Monitor: monitis (monitis.com) and our 
+- On-call rotation by PagerDuty: 
+- Centralized application/server logging: Graylog
+- Amazon CloudWatch: 
