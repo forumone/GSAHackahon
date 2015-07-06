@@ -32,6 +32,7 @@ var jsFilesToInject = [
   'vendor/jquery/jquery.js',
   'vendor/angular/*.js',
   'vendor/**/*.js',
+  '!vendor/angular-mocks/angular-mocks.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
@@ -66,7 +67,8 @@ module.exports.cssFilesToInject = cssFilesToInject.map(function(path) {
   return '.tmp/public/' + path;
 });
 module.exports.jsFilesToInject = jsFilesToInject.map(function(path) {
-  return '.tmp/public/' + path;
+  var hasBang = path.charAt(0) === '!';
+  return (hasBang ? '!' : '') + '.tmp/public/' + path.substr(+hasBang);
 });
 module.exports.templateFilesToInject = templateFilesToInject.map(function(path) {
   return 'assets/' + path;

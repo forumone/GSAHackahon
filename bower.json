@@ -27,6 +27,7 @@
     "jquery-selectability": "~1.0.1",
     "angular-material": "master",
     "d3": "~3.5.5",
-    "nvd3": "~1.8.1"
+    "nvd3": "~1.8.1",
+    "angular-mocks": "~1.4.1"
   }
 }

@@ -10,12 +10,17 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'test/assets/js/**/*spec.js'
+      'assets/vendor/jquery/jquery.js',
+      'assets/vendor/angular/*.js',
+      'assets/vendor/**/*.js',
+      'assets/js/interface/index.js',
+      'assets/js/**/*.js',
+      'test/assets/js/**/*.spec.js'
     ],
 
 
@@ -50,7 +55,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // start these browsers
