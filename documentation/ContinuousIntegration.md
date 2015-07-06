@@ -11,7 +11,7 @@ Our development, staging, and production environments are gated using the follow
 
 ##Continuous Integration
 
-Whether large or small, projects onths will likely require over a thousand deployments of code to the development, staging, and testing servers. We will use Vagrant and Puppet for managing local virtual machines, Jenkins and GruntJS for continuous integration, and Capistrano for deployment. This approach provides some key advantages:
+Whether large or small, any projects will likely require over a thousand deployments of code to the development, staging, and testing servers. We use Vagrant and Puppet for managing local virtual machines, Jenkins and GruntJS for continuous integration, and Capistrano for deployment. This approach provides some key advantages:
 
 - Equips our developers with the same software, versions, and configuration as all other team members.
 - Significantly increases the confidence we have that the code we push will be deployed the exact same way each time.
