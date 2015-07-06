@@ -31,7 +31,7 @@ A large component of our ability to stay lean and develop fast came from the use
 | 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. |
 | 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| x |
 | 5  | Wrote unit tests for their code | x |
-| 6  | Set up or used a continuous integration system to automate the runnin gof tests and continuously deployed their code to their IaaS or PaaS provider | x |
+| 6  | Set up or used a continuous integration system to automate the runnin gof tests and continuously deployed their code to their IaaS or PaaS provider | [link]( |
 | 7  | Set up or used a configuration management | x |
 | 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | x |
 | 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype |x |
