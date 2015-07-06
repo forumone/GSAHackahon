@@ -17,17 +17,17 @@ A large component of our ability to stay lean and develop fast came from the use
 ##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
-| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
-| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C | [link](https://github.com/forumone/18F#team-and-labor-categories---design-pool) |
-| 3  | Understand what people need, by including people in the prototype design process | [link](https://docs.google.com/document/d/11pnSJxqw-JNx2jYmWZJdVtUb0cXUE3tsB6qXkKOH60k/edit#) |
-| 4  | Used at least three “human-centered design” techniques or tools | [link](https://docs.google.com/document/d/11pnSJxqw-JNx2jYmWZJdVtUb0cXUE3tsB6qXkKOH60k/edit#) |
-| 5  | Created or used a design style guide and/or a pattern library |          |
-| 6  | Wsed at least three modern and open source frontend or client side web technologies | [link](http://agilebpa.forumone.com/about/#/) Among others, client side technologies include: D3, Angular, SASS, jQuerey |
-| 7  | Performed usability tests with people | [trello link](https://trello.com/c/P3M8k6Ag/29-user-research-usability-testing-wireframes), [survey link](https://www.surveymonkey.com/r/3MTG8JK)         |
-| 8  | Used an interactive approach, where feedback informed subsequent work or versions of the prototype | [Trello Board](https://trello.com/b/nCt1b9Fg/18f-agile-bpa), [Sprint Reviews/Retrospectives] (https://docs.google.com/document/d/160VHp6qdKdgGAMgxQbAn5HhGSLXCIvcWZYdnE2SK8mM/edit?usp=sharing) |
-| 9  | Created a prototype that works on multiple devices and presents a responsive design |         |
-| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F#web-starter-kit) |
-| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link](https://github.com/forumone/18F/blob/master/LICENSE.md) |
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link] |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C | x |
+| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | x |
+| 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| x |
+| 5  | Wrote unit tests for their code | x |
+| 6  | Set up or used a continuous integration system to automate the runnin gof tests and continuously deployed their code to their IaaS or PaaS provider | x |
+| 7  | Set up or used a configuration management | x |
+| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | x |
+| 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype |x |
+| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link] |
+| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link] |
 
 ## Team and Labor Categories - Development Pool
 | Role  | Bio | Responsibility | LOE |
