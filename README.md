@@ -3,9 +3,9 @@ Prototype URL: [http://agilebpadevpool.forumone.com](http://agilebpadevpool.foru
 
 ## Description
 
-dCARE is a tool that enables physicians, pharmacists, nurses, patients and care providers to understand the types of contraindications from taking two or more mental health drugs at the same time. The dCARE tool is specifically design to help those who are taking or prescribing pharmaceuticals for mental health issues (antidepressants and psychostimulants/nootropics) to understand if there are potentially adverse side effects from specific combinations of medicines.
+The dCAREHx tool was created to enable physicians, pharmacists, nurses, patients, care providers, and general consumers to understand the adverse events related from taking a particular mental health drug, and the frequency on which cases were submitted. The dCAREHx tool is specifically designed to help those who are taking or prescribing pharmaceuticals for mental health issues to understand if there are potentially adverse side effects from a particular medication as well as the number of cases reported over a period of time. It is based on official FDA data, and reduces the research time substantially.
 
-dCare includes the ability to show contradictors for several medications at the same time. It is based on official FDA data, and reduces the research time substantially. You can track our progress on our [trello board.](https://trello.com/b/nCt1b9Fg/18f-agile-bpa)
+You can track our progress on our [trello board.](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
 
 ## Approach - Development Pool 
 
@@ -19,7 +19,7 @@ A large component of our ability to stay lean and develop fast came from the use
 |----|----------|----------|
 | 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link] |
 | 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C | x |
-| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | x |
+| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. |
 | 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| x |
 | 5  | Wrote unit tests for their code | x |
 | 6  | Set up or used a continuous integration system to automate the runnin gof tests and continuously deployed their code to their IaaS or PaaS provider | x |
