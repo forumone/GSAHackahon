@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
     grunt.config.set('mocha_istanbul', {
         coverage: {
-            src: 'test',
+            src: [ 'test/**/*.spec.js', '!test/assets/**/*.spec.js' ],
             options: {
                 coverage_folder: 'coverage',
                 mask: '**/*.spec.js',
