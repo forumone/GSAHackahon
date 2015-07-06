@@ -8,12 +8,12 @@ The dCAREHx tool was created to enable physicians, pharmacists, nurses, patients
 You can track our progress on our [trello board.](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
 
 ## Approach - Development Pool 
-####Vision, Design and Preparation
+###Vision, Design and Preparation
 
 
-####Agile Methdologies
+###Agile Methdologies
 
-####Iterations on Minimum Viable Product
+###Iterations on Minimum Viable Product
 
 ###Usage of Open-source Technologies
 A large component of our ability to stay lean and develop fast came from the use of [open-source technologies](https://playbook.cio.gov/#play8). Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. 
