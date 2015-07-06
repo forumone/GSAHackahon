@@ -9,7 +9,7 @@ angular.module('gsa18f').directive('chartsLine', function() {
         useInteractiveGuideline : true
       })
       .x(function(d) {
-        return d.x
+        return new Date(d.x)
       }).y(function(d) {
         return d.y
       }).margin({
@@ -17,7 +17,7 @@ angular.module('gsa18f').directive('chartsLine', function() {
       });
       
       chart.xAxis.tickFormat(function(d) {
-        return d3.format(',d')(d);
+        return d3.time.format('%b %y')(new Date(d));
       });
       
       
