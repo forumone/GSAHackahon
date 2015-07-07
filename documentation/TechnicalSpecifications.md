@@ -18,15 +18,15 @@ Whether large or small, any projects will likely require over a thousand deploym
 - Allows our team to recover a previously-known good version of code if for some reason something does fail. This can take place regardless of how many code commits have happened since.
 
 ##Infrastructure as a Service and Hosting Environment
-Forum One designed and built the dCareHx tool on Amazon's popular EC2 Infrastructure as a Service. The prototype is deployed on an Amazon EC2 Linux Cloud Server.
-c3.large instance
-Linux
+Forum One designed and built the dCareHx tool on Amazon's popular EC2 Infrastructure as a Service. The prototype is deployed on a c3.large instance Amazon EC2 Linux Cloud Server.
 
 ##Continuous Monitoring
 The prototype tool is hosted on Amazon EC2 and monitored and maintained by a set of tools. The instrumentation provides insight into node status, comment modifications, cron age, system maintenance activity, search API queue status, enabled modules and sensors, module updates, user activity (login, logout, sessions), dblog (per severity), HTTP error messages, and much more. 
 
-- HTTP and Server Health Monitor: Monitis (monitis.com)
-- On-call rotation: PagerDuty 
-- Centralized application/server logging: Graylog
-- Amazon CloudWatch: 
-- New Relic: 
+- HTTP and Server Health Monitor: [Monitis] (http://www.monitis.com/) is an all-in-one application monitoring platform used to monitor the website and the server. Not only does Monitis provided uptime monitoring of the website, it monitors Linux® servers, CPUs, Memory, Storage and disk, Network bandwidth TCP protocols and WAN links.
+- On-call rotation: PagerDuty is an alarm aggregation and dispatching service used during emergencies and period of downtime. It collects alerts from the monitoring tools, gives an overall view of all of the monitoring alarms, and alerts an on duty engineer if there’s a problem.
+- Centralized application/server logging: Forum One uses the open source log management platform, for collecting, indexing, and analyzing both structured and unstructured data from almost any source. Non Graylog-authored components Include MongoDB for metadata and Elasticsearch for log file storage and text search.
+
+In addition to the above standard monitoring tools, Forum One somtimes also uses additional monitoring tools if required. These include: 
+- Amazon CloudWatch 
+- New Relic
