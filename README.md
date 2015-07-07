@@ -49,7 +49,7 @@ Because these are prototypes, we don’t yet have a lot of data to support the s
 | 5  | Wrote unit tests for their code | Unit tests were written for the prototype tool. [link](https://trello.com/c/0cvYzUvz) |
 | 6  | Set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | We use Vagrant and Puppet for managing local virtual machines, Jenkins and GruntJS for continuous integration, and Capistrano for deployment.[link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
 | 7  | Set up or used a configuration management | All configuration and source code is managed via Git using standard best practices. [link] (https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
-| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | ```docker run -it --rm --name 18f -v "$PWD":/server -w /server artificial/docker-sails npm install && sails lift``` |
+| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | ```docker run -it -d --name 18f -p 1337:1337 -v "$PWD":/server -w /server forumone/sails /bin/sh -c "npm install && bundle install && sails lift"``` |
 | 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype | Please see evidence within Trello board. We used an iterative approach and developed the prototype by iterating on an existing tool and making changes based on content, theme, color, and content. Iterations were made based on guidance from the Product Manager. [Trello Board] (https://trello.com/b/QIqBUToI/18f-agile-bpa-development) |
 | 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-#web-starter-kit) |
 | 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/LICENSE.md) |
@@ -79,9 +79,9 @@ To run unit tests run ```grunt test```
 
 ### Running using Docker
 
-In order to run the project with Docker you need to install Docker for your operating system or using boot2docker for OSX or Windows. Once the project is cloned you can launch it in Docker by running: ```docker run -it --rm --name my-running-script -v "$PWD":/server -w /server artificial/docker-sails npm install && sails lift```
+In order to run the project with Docker you need to install Docker for your operating system or using boot2docker for OSX or Windows. Once the project is cloned you can launch it in Docker by running: ```docker run -it -d --name 18f -p 1337:1337 -v "$PWD":/server -w /server forumone/sails /bin/sh -c "npm install && bundle install && sails lift"```
 
-The site will then be accessible at http://localhost:1337.
+If running boot2docker run ```boot2docker ip``` to get the IP address and access it on that IP address at port 1337.
 
-To run unit tests run ```docker run -it --rm --name my-running-script -v "$PWD":/server -w /server artificial/docker-sails npm install && grunt test```
+To run unit tests run ```docker run -it -d --name 18f -p 1337:1337 -v "$PWD":/server -w /server forumone/sails /bin/sh -c "npm install && bundle install && grunt test"``` and then to view the running tests you can run ```docker attach 18f```
 
