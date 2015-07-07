@@ -26,17 +26,17 @@ A large component of our ability to stay lean and develop fast came from the use
 ##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
-| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link] |
-| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C | x |
-| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. |
-| 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| x |
-| 5  | Wrote unit tests for their code | x |
-| 6  | Set up or used a continuous integration system to automate the runnin gof tests and continuously deployed their code to their IaaS or PaaS provider | [link]( |
-| 7  | Set up or used a configuration management | x |
-| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | x |
-| 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype |x |
-| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link] |
-| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link] |
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/README.md#team-and-labor-categories---development-pool) |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/README.md#team-and-labor-categories---development-pool) |
+| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| The prototype was deployed on Amazon Web Services EC2 Linux Server. [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 5  | Wrote unit tests for their code | Unit tests were written for the prototype tool. [link](https://trello.com/c/0cvYzUvz) |
+| 6  | Set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | We use Vagrant and Puppet for managing local virtual machines, Jenkins and GruntJS for continuous integration, and Capistrano for deployment.[link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 7  | Set up or used a configuration management | All configuration and source code is managed via Git using standard best practices. [link] (https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | [Docker script] |
+| 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype | Please see evidence within Trello board. We used an iterative approach and developed the prototype by iterating on an existing tool and making changes based on content, theme, color, and content. Iterations were made based on guidance from the Product Manager. [Trello Board] (https://trello.com/b/QIqBUToI/18f-agile-bpa-development) |
+| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-#web-starter-kit) |
+| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/LICENSE.md) |
 
 ## Team and Labor Categories - Development Pool
 | Role  | Bio | Responsibility | LOE |
