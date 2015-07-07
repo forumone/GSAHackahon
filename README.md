@@ -12,15 +12,31 @@ The dCAREHx tool was created to enable physicians, pharmacists, nurses, patients
 You can track our progress on our [trello board.](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
 
 ## Approach - Development Pool 
-###Vision, Design and Preparation
+####Vision, Design and Preparation
+Before starting, Forum One designated a Product Owner to play the role of client, while a development team met to internally kick off the project. During the formal kick off meeting with the Product Owner, we developed a vision for the prototype and sketched out what the prototype could look like. The Product Owner or Managers was held accountable for the tools success and was assisted by the Scrum Master who assisted with ticket assignments and providing documentation support to the team. 
 
+####Simple and Intuitive
+In the spirit of [Play 3 for the U.S. Digital Services Playbook] (https://playbook.cio.gov/#play30), the Product Owner and team decided to extend the component of an existing tool instead of re-making and new tool from scratch. This allowed the team to keep the tool simple and make changes in order to meet the Product Owner’s requirements and within the timeline requested. 
 
-###Agile Methdologies
+####Iterations on Minimum Viable Product
+Because we were starting from an existing tool, launching a minimum viable product was simple and we were able to launch in Sprint 1. Based on this launched MVP, the Product Owner was able to craft additional stories, provide minor design enhancements and worked with designers to prepare a sketch of required changes to the MVP. During this initial period, the Product Owner sought informal feedback from additional staff members on the tool and garnered feedback on key elements which were captured in additional stories in Sprint 3. 
 
-###Iterations on Minimum Viable Product
+####Agile Methodologies
+The Product Manager for the prototype relied on a small, intense team who are experts at using agile methodologies to build tools. The team (a Product Manager, Scrum Master, Technical Architect, Backend Developer) met during daily standups, held Sprint Planning and Review meetings, and participated actively in our Agile project management system, [Trello] (https://trello.com/b/QIqBUToI/18f-agile-bpa-development). All members of the team were given access to both the Git code repository but also to the Trello system, which allowed a virtual team to stay in close collaboration. 
 
-###Usage of Open-source Technologies
-A large component of our ability to stay lean and develop fast came from the use of [open-source technologies](https://playbook.cio.gov/#play8). Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. 
+####Experienced Teams
+We relied on Forum One’s best and brightest to build the prototype. The delivery team, Eric Davis, William Hurley, and Alex Ford have all worked on the same delivery team for several years and on several projects. William is Forum One’s go-to expert developer and is the most senior-level developer in the company. Alex is Forum One’s data visualization expert and is well-versed in API structures and has worked closely with William on several projects. 
+
+####Usage of Open-source Technologies
+A large component of our ability to stay lean and develop fast came from the use of open-source technologies. Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. In addition, our team went so far to even use open source design principles by leveraging [Google Material Design Principles] (https://www.google.com/design/spec/material-design/introduction.html#). This also sped up the prototype design process by re-using work to quickly get to the design of the prototype. Clear instructions for setting up and running the system are also provided later in this README file. 
+
+####Automated Testing and Deployments
+After the MVP had launched and additional tickets were logged for changes to the prototypes, the Backend Developer wrote a series of unit tests and allowed us to identify and few bugs which were then logged into the Trello board. The team automated any deployments use Git. 
+
+####Security and Privacy
+The Amazon EC2 hosting solution is one of the most secure IaaS solutions on the market and is used throughout the government - including on FISMA-approved websites hosted by Forum One. Security is important and our team is well-versed in all NIST, FISMA and FEDRamp security requirements. To monitor the server and application and to maintain its security and privacy, the prototype is being monitored by Monitis which is an all-in-one application monitoring platform used to monitor the website and the server. 
+####Data-driven Decisions
+Because these are prototypes, we don’t yet have a lot of data to support the success or failure of the prototype. Based on Forum One’s prior knowledge in this space, we used existing data and empirical research from other projects to drive our decisions on the tool to choose. Detailed tracking via Google Analytics or a similar analytics tool would be required over a period of time to judge the success of failure of the tool. 
 
 
 ##Development Criteria - Pool 2
