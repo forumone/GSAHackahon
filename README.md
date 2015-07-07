@@ -3,17 +3,17 @@ Prototype URL: [agilebpadevpool.forumone.com](http://agilebpadevpool.forumone.co
 
 Agile Management Tool: [Trello](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
 
-This tool tracked progress on the prototype and includes a timestamped chronological listing of how the prototypes was designed and developed by out team. All documentation within Trello is also in the Documentation section in Github. 
+This tool tracked progress on the prototype and includes a timestamped chronological listing of how the prototypes was designed and developed by out team. All documentation within Trello is also in the Documentation section in GitHub. 
 
 ## Description
 
 The dCAREHx tool was created to enable physicians, pharmacists, nurses, patients, care providers, and general consumers to understand the adverse events related from taking a particular mental health drug, and the frequency on which cases were submitted. The dCAREHx tool is specifically designed to help those who are taking or prescribing pharmaceuticals for mental health issues to understand if there are potentially adverse side effects from a particular medication as well as the number of cases reported over a period of time. It is based on official FDA data, and reduces the research time substantially.
 
-You can track our progress on our [trello board.](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
+You can track our progress on our [Trello board.](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
 
 ## Approach - Development Pool 
 ####Vision, Design and Preparation
-Before starting, Forum One designated a Product Owner to play the role of client, while a development team met to internally kick off the project. During the formal kick off meeting with the Product Owner, we developed a vision for the prototype and sketched out what the prototype could look like. The Product Owner or Managers was held accountable for the tools success and was assisted by the Scrum Master who assisted with ticket assignments and providing documentation support to the team. 
+Before starting, Forum One designated a Product Owner to play the role of client, while a development team met to internally kick off the project. During the formal kick off meeting with the Product Owner, we developed a vision for the prototype and sketched out what the prototype could look like. The Product Owner / Manager was held accountable for the tools success and was assisted by the Scrum Master who assisted with ticket assignments and providing documentation support to the team. 
 
 ####Simple and Intuitive
 In the spirit of [Play 3 for the U.S. Digital Services Playbook] (https://playbook.cio.gov/#play30), the Product Owner and team decided to extend the component of an existing tool instead of re-making and new tool from scratch. This allowed the team to keep the tool simple and make changes in order to meet the Product Owner’s requirements and within the timeline requested. 
