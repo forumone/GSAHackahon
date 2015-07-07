@@ -12,92 +12,61 @@ The dCAREHx tool was created to enable physicians, pharmacists, nurses, patients
 You can track our progress on our [trello board.](https://trello.com/b/QIqBUToI/18f-agile-bpa-development)
 
 ## Approach - Development Pool 
-###Vision, Design and Preparation
+####Vision, Design and Preparation
+Before starting, Forum One designated a Product Owner to play the role of client, while a development team met to internally kick off the project. During the formal kick off meeting with the Product Owner, we developed a vision for the prototype and sketched out what the prototype could look like. The Product Owner or Managers was held accountable for the tools success and was assisted by the Scrum Master who assisted with ticket assignments and providing documentation support to the team. 
 
+####Simple and Intuitive
+In the spirit of [Play 3 for the U.S. Digital Services Playbook] (https://playbook.cio.gov/#play30), the Product Owner and team decided to extend the component of an existing tool instead of re-making and new tool from scratch. This allowed the team to keep the tool simple and make changes in order to meet the Product Owner’s requirements and within the timeline requested. 
 
-###Agile Methdologies
+####Iterations on Minimum Viable Product
+Because we were starting from an existing tool, launching a minimum viable product was simple and we were able to launch in Sprint 1. Based on this launched MVP, the Product Owner was able to craft additional stories, provide minor design enhancements and worked with designers to prepare a sketch of required changes to the MVP. During this initial period, the Product Owner sought informal feedback from additional staff members on the tool and garnered feedback on key elements which were captured in additional stories in Sprint 3. 
 
-###Iterations on Minimum Viable Product
+####Agile Methodologies
+The Product Manager for the prototype relied on a small, intense team who are experts at using agile methodologies to build tools. The team (a Product Manager, Scrum Master, Technical Architect, Backend Developer) met during daily standups, held Sprint Planning and Review meetings, and participated actively in our Agile project management system, [Trello] (https://trello.com/b/QIqBUToI/18f-agile-bpa-development). All members of the team were given access to both the Git code repository but also to the Trello system, which allowed a virtual team to stay in close collaboration. 
 
-###Usage of Open-source Technologies
-A large component of our ability to stay lean and develop fast came from the use of [open-source technologies](https://playbook.cio.gov/#play8). Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. 
+####Experienced Teams
+We relied on Forum One’s best and brightest to build the prototype. The delivery team, Eric Davis, William Hurley, and Alex Ford have all worked on the same delivery team for several years and on several projects. William is Forum One’s go-to expert developer and is the most senior-level developer in the company. Alex is Forum One’s data visualization expert and is well-versed in API structures and has worked closely with William on several projects. 
+
+####Usage of Open-source Technologies
+A large component of our ability to stay lean and develop fast came from the use of open-source technologies. Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. In addition, our team went so far to even use open source design principles by leveraging [Google Material Design Principles] (https://www.google.com/design/spec/material-design/introduction.html#). This also sped up the prototype design process by re-using work to quickly get to the design of the prototype. Clear instructions for setting up and running the system are also provided later in this README file. 
+
+####Automated Testing and Deployments
+After the MVP had launched and additional tickets were logged for changes to the prototypes, the Backend Developer wrote a series of unit tests and allowed us to identify and few bugs which were then logged into the Trello board. The team automated any deployments use Git. 
+
+####Security and Privacy
+The Amazon EC2 hosting solution is one of the most secure IaaS solutions on the market and is used throughout the government - including on FISMA-approved websites hosted by Forum One. Security is important and our team is well-versed in all NIST, FISMA and FEDRamp security requirements. To monitor the server and application and to maintain its security and privacy, the prototype is being monitored by Monitis which is an all-in-one application monitoring platform used to monitor the website and the server. 
+####Data-driven Decisions
+Because these are prototypes, we don’t yet have a lot of data to support the success or failure of the prototype. Based on Forum One’s prior knowledge in this space, we used existing data and empirical research from other projects to drive our decisions on the tool to choose. Detailed tracking via Google Analytics or a similar analytics tool would be required over a period of time to judge the success of failure of the tool. 
 
 
 ##Development Criteria - Pool 2
 | #  | Criteria | Evidence |
 |----|----------|----------|
-| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link] |
-| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C | x |
-| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. |
-| 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| x |
-| 5  | Wrote unit tests for their code | x |
-| 6  | Set up or used a continuous integration system to automate the runnin gof tests and continuously deployed their code to their IaaS or PaaS provider | x |
-| 7  | Set up or used a configuration management | x |
-| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | x |
-| 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype |x |
-| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link] |
-| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link] |
+| 1  | Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/README.md#team-and-labor-categories---development-pool) |
+| 2  | Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/README.md#team-and-labor-categories---development-pool) |
+| 3  | Used at least five modern and open-source technologies, regardless of architectural layer (frontend, backed, etc) | Our team developed the prototype on GitHub, using modern stack of tools that include SASS, Angular, D3, Jenkins, Capistrano, Sails, Lodash, jQuery, Grunt, Bower, and NPM. [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 4  | Deployed the prototypes on an Infrastructure as a Service (IaaS) or Platform as a Service (Paas) provider, and indicated which provider was used| The prototype was deployed on Amazon Web Services EC2 Linux Server. [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 5  | Wrote unit tests for their code | Unit tests were written for the prototype tool. [link](https://trello.com/c/0cvYzUvz) |
+| 6  | Set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | We use Vagrant and Puppet for managing local virtual machines, Jenkins and GruntJS for continuous integration, and Capistrano for deployment.[link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 7  | Set up or used a configuration management | All configuration and source code is managed via Git using standard best practices. [link] (https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/documentation/TechnicalSpecifications.md) |
+| 8  | Deploy their software in a container (i.e., utilized operating-system level virualization) | ```docker run -it --rm --name 18f -v "$PWD":/server -w /server artificial/docker-sails npm install && sails lift``` |
+| 9  | Used an iterative approach, where feedback informed subsequent work or versions of the prototype | Please see evidence within Trello board. We used an iterative approach and developed the prototype by iterating on an existing tool and making changes based on content, theme, color, and content. Iterations were made based on guidance from the Product Manager. [Trello Board] (https://trello.com/b/QIqBUToI/18f-agile-bpa-development) |
+| 10 | Provided sufficient documentation to install and run their prototype on another machine | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-#web-starter-kit) |
+| 11 | Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | [link](https://github.com/forumone/18F-ADSBPA-Pool-2-Dev-/blob/master/LICENSE.md) |
 
 ## Team and Labor Categories - Development Pool
 | Role  | Bio | Responsibility | LOE |
 |----|----------|----------|----|
-| Product Manager - Eric Davis | Eric Davis is a Project Director at Forum One, where he serves as Senior Advisor and Program Managemer on many of our web strategy and development projects. Eric has over twelve years of experience using technology in a health policy and programming setting, from hands-on web development, organizational web strategy and marketing, all using agile project methdologies. Some of Eric’s most recent clients at Forum One include the Centers for Disease Control and Prevention, the Patient-Centered Outcomes Research Institute (PCORI), and the National Cancer Institute. Prior to joining Forum One, Eric was Vice President of Digital Health at Edelman, and previously Vice President of Digital Strategies at IQ Solutions. He has a bachelor’s degree in Exercise Physiology from Ball State University, a master’s in Health Policy from American University, and an MBA from University of Maryland, College Park. Eric is Forum One's go-to expert when managing healthcare-related projects.| xx hours |
-| Technical Architect - William Hurley | William Hurley is Manager, Technical Development for Forum One, where he is responsible for delivering smart technical solutions and managing a team of developers. His skills combine technical web development and knowledge of organizational system design, and he has been developing on the web since 1997 using PHP, Java, Adobe Flex, JavaScript, and ColdFusion. William also has extensive knowledge of XHTML/HTML, CSS and XML, and related technologies. Using Agile principles, William has led the technical development for the Educational Testing Services, EnergyStar, the Environmental Protection Agency, Robert Wood Johnson Foundation, and the World Bank. | xxx | xxx hours |
-| Back-end Developer - Alex Ford | Alex Ford is a Developer at Forum One, where he is responsible for delivering smart solutions that satisfy our clients’ complex and varying business goals. Recent clients with whom Alex has worked include the U.S. Department of Agriculture, the U.S. Global Change Research Program, and the National Assessment of Educational Progress. Alex earned his B.A. in Mathematics at the University of North Carolina at Asheville and spent a year in San Antonio. He came to Forum One from NationalField, an enterprise social network, where he learned how to massage data into the proper format for web-based consumption. Alex is Forum One's data guru and is lead developer on many of the complex data or data visualization projects within the company. | xxxx | xxx |
+| Product Manager - Eric Davis | Eric Davis is a Project Director at Forum One, where he serves as Senior Advisor and Program Managemer on many of our web strategy and development projects. Eric has over twelve years of experience using technology in a health policy and programming setting, from hands-on web development, organizational web strategy and marketing, all using agile project methdologies. Some of Eric’s most recent clients at Forum One include the Centers for Disease Control and Prevention, the Patient-Centered Outcomes Research Institute (PCORI), and the National Cancer Institute. Prior to joining Forum One, Eric was Vice President of Digital Health at Edelman, and previously Vice President of Digital Strategies at IQ Solutions. He has a bachelor’s degree in Exercise Physiology from Ball State University, a master’s in Health Policy from American University, and an MBA from University of Maryland, College Park. Eric is Forum One's go-to expert when managing healthcare-related projects. | Eric Davis has authority and responsibility over the quality of the submitted prototype. | 12 hours |
+| Technical Architect - William Hurley | William Hurley is Manager, Technical Development for Forum One, where he is responsible for delivering smart technical solutions and managing a team of developers. His skills combine technical web development and knowledge of organizational system design, and he has been developing on the web since 1997 using PHP, Java, Adobe Flex, JavaScript, and ColdFusion. William also has extensive knowledge of XHTML/HTML, CSS and XML, and related technologies. Using Agile principles, William has led the technical development for the Educational Testing Services, EnergyStar, the Environmental Protection Agency, Robert Wood Johnson Foundation, and the World Bank. | William Hurley is responsible for the overall technica infrastructure, defining the technical solution and providing a roadmap for the backend developer and assigning tasks. He is also repsonsible for conducting code reviews and leading Sprint Review meetings. | 24 hours |
+| Back-end Developer - Alex Ford | Alex Ford is a Developer at Forum One, where he is responsible for delivering smart solutions that satisfy our clients’ complex and varying business goals. Recent clients with whom Alex has worked include the U.S. Department of Agriculture, the U.S. Global Change Research Program, and the National Assessment of Educational Progress. Alex earned his B.A. in Mathematics at the University of North Carolina at Asheville and spent a year in San Antonio. He came to Forum One from NationalField, an enterprise social network, where he learned how to massage data into the proper format for web-based consumption. Alex is Forum One's data guru and is lead developer on many of the complex data or data visualization projects within the company. | Alex supports the Technical Architect and completes development tasks as assigned. Alex is also responsible for the quality of the system and writing unit tests to ensure code quality. | 8 hours |
+| DevOps Engineer - Mike Shade| Mike Shade is a Senior Systems Administrator at Forum One, where he is responsible for hosting operations and infrastructure planning for our clients' sites. He has been with Forum One for 7 years and has expertise with a wide variety of platforms and technologies. His expertise with high performance and high availability scaling techniques enables Forum One to successfully launch and maintain client sites of any size with confidence. Mike is a Red Hat Certified Engineer (2008). | Mike is responsible for provisioning the environment for the prototype and also ensuring the server infrastructure meets project's needs. He also implemented any continuous monitoring solutions required. | 2 hours |
 
-## Web Starter Kit
+## Installing project
 
-This project has been setup to use a virtual machine for local development to closely mirror the production environment. To use the the virtual machine, follow these instructions.
+The dCAREHx project is built using SailsJS, a real-time NodeJS framework. You can run this locally or through a Docker container.
 
-## Preparing your local environment
-
-  * Latest Virtualbox -- [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads). If you are running Win 7 install 4.2.x
-  * Latest Virtualbox Extension Pack -- [https://www.virtualbox.org/wiki/Downloads]. Should match your Virtualbox version
-  * Vagrant (currently tested with 1.3.5 and 1.6.2) -- [http://downloads.vagrantup.com](http://downloads.vagrantup.com)
-
-
-## Getting Vagrant environment set up
-Starting from within the root of your project (an existing project which already has a vagrant/puppet configured or starting a new project from the Drupal Starter Project), do the following:
-
-1. Create VM by running "vagrant up" (This step will take long (might be 5+ minutes) as all necessary components are being downloaded and installed)
-  * If you get an error re-provision the VM by running "vagrant provision" to see if this resolves the issue
-2. SSH into VM by running "vagrant ssh"
-3. Navigate to VM docroot by running "cd /vagrant/public"
-4. Install Drupal using custom install profile by running "drush si [profile] -y" and following prompts. Alterntatively, use drush aliases to synch to a development instance of a site database. 
-
-## Troubleshooting
-
-Occasionally some issues may occur that prevent you from loading the virtual machine. Below are some common issues that others have experienced.
-
-### General
-
-If the virtual machine does not boot up and you get a message saying there was a timeout, try launching the VM through the Virtualbox interface to get more detailed information.
-
-
-### Macintosh machines
-
-* If you experience errors when sharing the folder over NFS you may need to enable File Sharing in System Preferences -> Sharing
-* If you receive an error about an invalid export you may need to manually delete /etc/exports file
-* If you've updated to Mavericks and Virtualbox is no longer working, try the following command: sudo /Library/StartupItems/VirtualBox/VirtualBox restart
-* If you are prompted to enter your password when SSHing from the VM ensure your SSH private key is in the keychain by running "ssh-add -K ~/.ssh/id_rsa" from your machine
-
-### Linux machines
-
-* If you experience errors when sharing the folder over NFS you may need to install the appropriate NFS packages, on Ubuntu you will need to run "sudo apt-get install nfs-kernel-server"
-
-### Windows machines
-
-* Virtualbox requires the Intel Virtualization Technology for Directed I/O (VT-d) be enabled, if you receive a message saying that the VM requires a 64 bit processor and you only have an i686 processor this may be the cause
-* Virtualbox may trigger a Windows Firewall popup to allow ports to be shared
-* If the provisioning fails with errors on ports.conf or sites.xml this may be due to CRLF issues with the configuration files, to resolve this take the following actions:
-  1. git config --global --edit
-  2. Add line if missing: [core]
-  3. Below that line add line: autocrlf = input
-* if your ssh key information does not correctly forward, you can copy your ssh private key to ~/.ssh and chmod it 700
-* if git says everything is changed, it's probably the line endings issues you've most likely seen before, doing "git add -u" should just remove them from the list (and not add them to be committed)
-
-
-## Installing locally
+### Running locally
 
 In order to run the project locally you need NPM of 1.4 or higher as well as bower and sails packages installed globally. Run ```npm --version``` to check your version of NPM and then ```sudo npm update npm -g``` to upgrade as necessary. To install the packages run:
 
@@ -105,4 +74,14 @@ In order to run the project locally you need NPM of 1.4 or higher as well as bow
 * ```sudo npm install sails -g``` to install sails
 
 To start the site run ```sails lift``` within the root checkout. It will run the Grunt tasks and start Express so the site is available at http://localhost:1337.
+
+To run unit tests run ```grunt test```
+
+### Running using Docker
+
+In order to run the project with Docker you need to install Docker for your operating system or using boot2docker for OSX or Windows. Once the project is cloned you can launch it in Docker by running: ```docker run -it --rm --name my-running-script -v "$PWD":/server -w /server artificial/docker-sails npm install && sails lift```
+
+The site will then be accessible at http://localhost:1337.
+
+To run unit tests run ```docker run -it --rm --name my-running-script -v "$PWD":/server -w /server artificial/docker-sails npm install && grunt test```
 
