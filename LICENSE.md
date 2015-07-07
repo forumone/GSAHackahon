@@ -15,9 +15,13 @@ We used several tools in creating dCare. The licenses for those tools are listed
 * node.js MIT License, with bundled other licenses.
 [Please read full license agreement for node.js to understand full licensing full details](https://github.com/joyent/node/blob/master/LICENSE)
 
-Statement of Purpose: All copyright, trademark, and patent rights in this work, where applicable, is waived.
+####Statement of Purpose
 
-Copyright Waiver: This package contains the work of Forum One Communications Corporation, and may include the work of properly licensed works. Forum One Communications Corporation permanently waives all copyright and related rights in the work worldwide.
+All copyright, trademark, and patent rights in this work, where applicable, is waived.
+
+####Copyright Waiver
+
+This package contains the work of Forum One Communications Corporation, and may include the work of properly licensed works. Forum One Communications Corporation permanently waives all copyright and related rights in the work worldwide.
 The General Services Administration is given unlimited rights to the work, delivered under agreement, which includes the right to use, disclose, reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, in any manner and for any purpose whatsoever, and to have or permit others to do so.
 
 Forum One Communications Corporation permanently waives all copyright and related rights worldwide in the portions of work in this package delivered under contract, and explicitly grants the public the right to the work to use, disclose, reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, in any manner and for any purpose whatsoever.
