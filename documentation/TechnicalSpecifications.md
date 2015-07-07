@@ -1,3 +1,16 @@
+##  Open Source Tools
+- Jenkins
+- Capistrano
+- Sails
+- D3
+- Angular
+- Lodash
+- jQuery
+- Grunt
+- SASS
+- Bower
+- NPM
+
 ##Source Code Management Solution
 
 Forum One used the Git code versioning system repository to serve as the authoritative source for all website development releases for the prototype. William established a Git branch and tagging standards to facilitate the automation of deployments to development, stage, and production environments. Git allows our multi-developer team to work collaboratively, while ensuring quality and redundancy. 
