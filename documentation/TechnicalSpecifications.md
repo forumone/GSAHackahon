@@ -45,4 +45,4 @@ In addition to the above standard monitoring tools, Forum One somtimes also uses
 - New Relic
 
 ## Browser Compatability
-The dCare tool has been fully tested on the latest two versions of popular browsers including Chrome, Safari, Internet Explorer and Firefox. The tool has also been tested on the iPhone 5/5s and latest phone running the Android OS. 
+The dCareHx tool has been fully tested on the latest two versions of popular browsers including Chrome, Safari, Internet Explorer and Firefox. The tool has also been tested on the iPhone 5/5s and latest phone running the Android OS. 
