@@ -34,7 +34,7 @@ Whether large or small, any projects will likely require over a thousand deploym
 Forum One designed and built the dCareHx tool on Amazon's popular EC2 Infrastructure as a Service. The prototype is deployed on a c3.large instance Amazon EC2 Linux Cloud Server.
 
 ##Continuous Monitoring
-The prototype tool is hosted on Amazon EC2 and monitored and maintained by a set of tools. The instrumentation provides insight into node status, comment modifications, cron age, system maintenance activity, search API queue status, enabled modules and sensors, module updates, user activity (login, logout, sessions), dblog (per severity), HTTP error messages, and much more. 
+The prototype tool is hosted on Amazon EC2 and monitored and maintained by a set of tools. The instrumentation provides insight into the overall health of the system. Tools we use include:
 
 - HTTP and Server Health Monitor: [Monitis] (http://www.monitis.com/) is an all-in-one application monitoring platform used to monitor the website and the server. Not only does Monitis provided uptime monitoring of the website, it monitors Linux® servers, CPUs, Memory, Storage and disk, Network bandwidth TCP protocols and WAN links.
 - On-call rotation: [PagerDuty](https://www.pagerduty.com/) is an alarm aggregation and dispatching service used during emergencies and period of downtime. It collects alerts from the monitoring tools, gives an overall view of all of the monitoring alarms, and alerts an on duty engineer if there’s a problem.
