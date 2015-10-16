@@ -1,4 +1,4 @@
-angular.module('gsa18f').service('fdaEvent', function($http) {
+angular.module('gsaHackathon').service('fdaEvent', function($http) {
   function getEventDates(drugs) {
     return $http.get('/api/fda/eventdates', {
       params : {

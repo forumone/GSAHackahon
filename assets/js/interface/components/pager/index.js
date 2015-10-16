@@ -8,7 +8,7 @@
  * @element EA
  * 
  */
-angular.module('gsa18f').directive(
+angular.module('gsaHackathon').directive(
     'paging',
     function() {
 

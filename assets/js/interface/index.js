@@ -1,5 +1,5 @@
-var gsa18f = angular.module('gsa18f', [ 'ngRoute', 'ui.router', 'ngMaterial']);
-gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $mdThemingProvider) {
+var gsaHackathon = angular.module('gsaHackathon', [ 'ngRoute', 'ui.router', 'ngMaterial']);
+gsaHackathon.config(function($urlRouterProvider, $locationProvider, $stateProvider, $mdThemingProvider) {
   $urlRouterProvider.otherwise('/');
   
   var dCarePalette = $mdThemingProvider.extendPalette('cyan', {
@@ -51,7 +51,7 @@ gsa18f.config(function($urlRouterProvider, $locationProvider, $stateProvider, $m
   });
 });
 
-gsa18f.constant('DrugSeriousness', {
+gsaHackathon.constant('DrugSeriousness', {
   seriousnessdisabling : "Disability",
   seriousnesscongenitalanomali : "Congenital Anomaly",
   seriousnessdeath : "Death",
@@ -60,7 +60,7 @@ gsa18f.constant('DrugSeriousness', {
   seriousnessother : "Other Serious"
 });
 
-gsa18f.run(function($rootScope, $state, $stateParams) {
+gsaHackathon.run(function($rootScope, $state, $stateParams) {
   $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     $rootScope.tabIndex = $stateParams.tabIndex;
   });

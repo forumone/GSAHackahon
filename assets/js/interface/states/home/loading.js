@@ -1,3 +1,3 @@
-angular.module('gsa18f').controller('LoadingController', function($scope, $mdToast) {
+angular.module('gsaHackathon').controller('LoadingController', function($scope, $mdToast) {
   
 });

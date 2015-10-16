@@ -1,4 +1,4 @@
-angular.module('gsa18f').directive(
+angular.module('gsaHackathon').directive(
     'chartsRadar',
     function() {
       var RadarChart = {

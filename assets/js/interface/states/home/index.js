@@ -1,4 +1,4 @@
-angular.module('gsa18f').controller('HomeController', function($scope, $stateParams, $state, substances, fdaEvent, $mdToast) {
+angular.module('gsaHackathon').controller('HomeController', function($scope, $stateParams, $state, substances, fdaEvent, $mdToast) {
   $scope.drugs = [];
   
   // Performs search for drug

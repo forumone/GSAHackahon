@@ -1,4 +1,4 @@
-angular.module('gsa18f').service('fdaLabel', function($http) {
+angular.module('gsaHackathon').service('fdaLabel', function($http) {
   function getLabel(id) {
     return $http.get('/api/fda/label.json', {
       params : {

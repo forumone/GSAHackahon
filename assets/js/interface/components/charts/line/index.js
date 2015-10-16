@@ -1,4 +1,4 @@
-angular.module('gsa18f').directive('chartsLine', function() {
+angular.module('gsaHackathon').directive('chartsLine', function() {
   function buildChart(element, attrs, data, chart) {
     var svg = null;
 
