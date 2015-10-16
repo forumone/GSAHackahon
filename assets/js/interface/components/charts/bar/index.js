@@ -3,7 +3,7 @@ angular.module('gsaHackathon').directive('chartsBar', function() {
     var svg = null;
 
     if (!chart) {
-      chart = nv.models.multiBarHorizontalChart();
+      chart = nv.models.multiBarChart();
 
       chart.x(function(d) {
         return d.label
