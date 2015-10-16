@@ -1,40 +1,205 @@
-<div class="application">
-  <div class="layout-constrain" layout="column">
-    <h1 class="md-toolbar-tools header">Drug Contraindication Adverse Reaction History (dCAREHx)</h1>
-    <div class="md-whiteframe-z3" layout="row" layout-sm="column">
-      <section flex="33" flex-sm="100" class="controls">
-        <div class="md-hue-1"> 
-          <md-toolbar class="md-hue-1">
-            <h2 class="md-toolbar-tools"><span>Choose Drugs to View</span></h2>
-          </md-toolbar> 
-        <div layout="column" layout-margin>
-          <p>Combine multiple drugs to find adverse reactions</p>
-
-          <md-chips ng-model="drugs" readonly=isReadOnly> <md-chip-template>
-          <strong>{{$chip.brand_name}}</strong> </md-chip-template> </md-chips>
-
-          <md-autocomplete 
-		        md-selected-item="selectedItem" 
-		        md-search-text="searchText"  
-		        md-items="item in querySearch(searchText)"
-		        md-item-text="item.brand_name"
-		        md-min-length="1"
-		        placeholder="Find your drug">
-		        <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.brand_name}}</span>
-		      </md-autocomplete>
-		      
-          <md-button class="md-raised md-primary md-hue-2 add-drug" ng-click="addDrug()" ng-disabled="!selectedItem">Add drug</md-button>
+<div class="application" layout="column">
+  <div class="md-whiteframe-z3" layout="row" layout>
+    <md-section flex="50" class="center">
+      <md-toolbar><h2>FY 2015 Travel Budget</h2></md-toolbar>
+      <div layout>
+        <div layout="row">
+          <div layout="column">
+            <div>$400,000</div>
+            <div>($60,000)</div>
+            <div><hr/></div>
+            <div>$340,000</div>
+           </div>
+           <div layout="column" class="labels">
+            <div>Total</div>
+            <div>Expenses</div>
+            <div><hr/></div>
+            <div>Available</div>
+           </div>
         </div>
-      </section>
-      <section flex="66" flex-sm="100">
-        <charts-line 
-          yaxis-label="Number of Reported Instances" 
-          title="Adverse Events per Month" 
-          height="400" 
-          width="500" 
-          data="data"
-          ng-show="0 < drugs.length"></charts-bar>
-      </section>
+      </div>
+    </md-section>
+    <div flex="50">
+      <charts-bar
+	    yaxis-label=""
+        title="Q2 Expense Overview"
+        height="400"
+        width="500"
+        data="data"></charts-bar>
     </div>
   </div>
+  <div class="md-whiteframe-z3" layout="row" layout>
+    <table width="100%" class="trip__details">
+      <thead>
+        <th>Total # of Trips</th>
+        <th>FY 2015</th>
+        <th>Q2</th>
+        <th>Q1</th>
+      </thead>
+      <tbody>
+        <tr class="center">
+          <td>&nbsp;</td>
+          <td>50</td>
+          <td>30</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4"><strong>Per Capita</strong></td>
+        </tr>
+        <tr>
+          <td>Average Trip Cost</td>
+          <td>$500</td>
+          <td>$800</td>
+          <td>$800</td>
+        </tr>
+        <tr>
+          <td>Average Trip Distance</td>
+          <td>1,500 miles</td>
+          <td>1,200 miles</td>
+          <td>1,200 miles</td>
+        </tr>
+        <tr>
+          <td>Average Trip Time</td>
+          <td>2.5 days</td>
+          <td>3.5 days</td>
+          <td>3.5 days</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="md-whiteframe-z3">
+    <md-grid-list md-cols="3" md-gutter="1em" md-row-height="4:3">
+      <md-grid-tile>
+        <md-section flex class="center">
+          <md-toolbar><h2>Program 1</h2></md-toolbar>
+          <div layout>
+            <div layout="row">
+              <div layout="column">
+                <div>$400,000</div>
+                <div>($60,000)</div>
+                <div><hr/></div>
+                <div>$340,000</div>
+              </div>
+              <div layout="column" class="labels">
+                <div>Total</div>
+                <div>Expenses</div>
+                <div><hr/></div>
+                <div>Available</div>
+              </div>
+            </div>
+          </div>
+        </md-section>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-section flex class="center">
+          <md-toolbar><h2>Program 2</h2></md-toolbar>
+          <div layout>
+            <div layout="row">
+              <div layout="column">
+                <div>$400,000</div>
+                <div>($60,000)</div>
+                <div><hr/></div>
+                <div>$340,000</div>
+              </div>
+              <div layout="column" class="labels">
+                <div>Total</div>
+                <div>Expenses</div>
+                <div><hr/></div>
+                <div>Available</div>
+              </div>
+            </div>
+          </div>
+        </md-section>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-section flex class="center">
+          <md-toolbar><h2>Program 3</h2></md-toolbar>
+          <div layout>
+            <div layout="row">
+              <div layout="column">
+                <div>$400,000</div>
+                <div>($60,000)</div>
+                <div><hr/></div>
+                <div>$340,000</div>
+              </div>
+              <div layout="column" class="labels">
+                <div>Total</div>
+                <div>Expenses</div>
+                <div><hr/></div>
+                <div>Available</div>
+              </div>
+            </div>
+          </div>
+        </md-section>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-section flex class="center">
+          <md-toolbar><h2>Program 4</h2></md-toolbar>
+          <div layout>
+            <div layout="row">
+              <div layout="column">
+                <div>$400,000</div>
+                <div>($60,000)</div>
+                <div><hr/></div>
+                <div>$340,000</div>
+              </div>
+              <div layout="column" class="labels">
+                <div>Total</div>
+                <div>Expenses</div>
+                <div><hr/></div>
+                <div>Available</div>
+              </div>
+            </div>
+          </div>
+        </md-section>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-section flex class="center">
+          <md-toolbar><h2>Program 5</h2></md-toolbar>
+          <div layout>
+            <div layout="row">
+              <div layout="column">
+                <div>$400,000</div>
+                <div>($60,000)</div>
+                <div><hr/></div>
+                <div>$340,000</div>
+              </div>
+              <div layout="column" class="labels">
+                <div>Total</div>
+                <div>Expenses</div>
+                <div><hr/></div>
+                <div>Available</div>
+              </div>
+            </div>
+          </div>
+        </md-section>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-section flex class="center">
+          <md-toolbar><h2>Program 6</h2></md-toolbar>
+          <div layout>
+            <div layout="row">
+              <div layout="column">
+                <div>$400,000</div>
+                <div>($60,000)</div>
+                <div><hr/></div>
+                <div>$340,000</div>
+              </div>
+              <div layout="column" class="labels">
+                <div>Total</div>
+                <div>Expenses</div>
+                <div><hr/></div>
+                <div>Available</div>
+              </div>
+            </div>
+          </div>
+        </md-section>
+      </md-grid-tile>
+    </md-grid-list>
+    
+  </div>
 </div>
+
+

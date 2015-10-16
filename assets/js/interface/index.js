@@ -2,10 +2,10 @@ var gsaHackathon = angular.module('gsaHackathon', [ 'ngRoute', 'ui.router', 'ngM
 gsaHackathon.config(function($urlRouterProvider, $locationProvider, $stateProvider, $mdThemingProvider) {
   $urlRouterProvider.otherwise('/');
   
-  var dCarePalette = $mdThemingProvider.extendPalette('cyan', {
-    '300' : 'c9c7c8',
-    '800' : '1daaf1',
-    'A100' : 'eb2e80'
+  var dCarePalette = $mdThemingProvider.extendPalette('indigo', {
+//    '300' : 'c9c7c8',
+//    '800' : '1daaf1',
+//    'A100' : 'eb2e80'
   });
   
   // Register the new color palette map with the name <code>neonRed</code>
@@ -13,7 +13,7 @@ gsaHackathon.config(function($urlRouterProvider, $locationProvider, $stateProvid
   
   $mdThemingProvider.theme('default')
     .primaryPalette('dCarePalette')
-    .accentPalette('grey');
+    .accentPalette('amber');
   
   $stateProvider
   // Home page
@@ -49,23 +49,4 @@ gsaHackathon.config(function($urlRouterProvider, $locationProvider, $stateProvid
       }
     }
   });
-});
-
-gsaHackathon.constant('DrugSeriousness', {
-  seriousnessdisabling : "Disability",
-  seriousnesscongenitalanomali : "Congenital Anomaly",
-  seriousnessdeath : "Death",
-  seriousnesshospitalization : "Hospitalization",
-  seriousnesslifethreatening : "Life-threatening",
-  seriousnessother : "Other Serious"
-});
-
-gsaHackathon.run(function($rootScope, $state, $stateParams) {
-  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-    $rootScope.tabIndex = $stateParams.tabIndex;
-  });
-  
-  $rootScope.goState = function(state) {
-    $state.go(state);
-  }
 });

@@ -2,7 +2,7 @@
 <html>
   <head lang="en" dir="ltr">
     <meta charset="utf-8">
-    <title>GSA 18F Demo</title>
+    <title>GSA Hackathon</title>
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimized" content="width">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,29 +23,13 @@
     <![endif]-->
   </head>
 
-  <body ng-app="gsa18f">
-    <md-toolbar class="demo-toolbar md-accent md-hue-1 md-whiteframe-z5">
-      <div layout="row" layout-margin>
-        <div class="logo"><img src="/images/dcareHX-logo.svg" height="44" width="143" /></div>
-        <div flex class="tabs">
-          <md-tabs md-selected="tabIndex">
-            <md-tab md-on-select="goState('home')">
-              <h3>Data Viewer</h3>
-            </md-tab>
-            <md-tab md-on-select="goState('about')">
-              <h3>About</h3>
-            </md-tab>
-          </md-tabs>
-        </div>
-      </div>
-      </div>
+  <body ng-app="gsaHackathon">
+    <md-toolbar class="demo-toolbar md-whiteframe-z5">
+      <h1>Agency A</h1>
     </md-toolbar>
     <div>
       <%- body %>
     </div>
-    <md-toolbar class="md-primary md-hue-3 footer">
-      <h4>To report SUSPECTED ADVERSE REACTIONS, contact the FDA at 1-800-FDA-1088 or <a href="http://www.fda.gov/medwatch">www.fda.gov/medwatch</a>.</h4>
-    </md-toolbar>
   </body>
 
     <!--TEMPLATES-->
@@ -74,10 +58,8 @@
     <script src="/js/interface/components/charts/line/index.js"></script>
     <script src="/js/interface/components/charts/radar/index.js"></script>
     <script src="/js/interface/components/pager/index.js"></script>
-    <script src="/js/interface/services/fda/event.js"></script>
-    <script src="/js/interface/services/fda/label.js"></script>
-    <script src="/js/interface/services/substances/index.js"></script>
-    <script src="/js/interface/states/drug/index.js"></script>
+    <script src="/js/interface/services/airfare/index.js"></script>
+    <script src="/js/interface/services/vouchers/index.js"></script>
     <script src="/js/interface/states/home/index.js"></script>
     <script src="/js/interface/states/home/loading.js"></script>
     <script src="/js/interface/states/page/index.js"></script>

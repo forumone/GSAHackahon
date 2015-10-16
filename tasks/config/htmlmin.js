@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.config.set('htmlmin', {
-    gsa18f : {
+    gsaHackathon : {
       collapseBooleanAttributes : true,
       collapseWhitespace : true,
       removeAttributeQuotes : true,
