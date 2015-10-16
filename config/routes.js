@@ -41,6 +41,7 @@ module.exports.routes = {
   '/definitions' : {
     view : 'definitions'
   },
+  'GET /programs' : 'VoucherController.getPrograms',
 
   /***************************************************************************
   *                                                                          *

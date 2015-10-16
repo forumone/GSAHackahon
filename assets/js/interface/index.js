@@ -31,10 +31,10 @@ gsaHackathon.config(function($urlRouterProvider, $locationProvider, $stateProvid
       }
     }
   })
-  .state('drug', {
-    url : '/drug/:id',
-    templateUrl : 'states/drug/index.html',
-    controller : 'DrugController'
+  .state('program', {
+    url : '/program',
+    templateUrl : 'states/program/index.html',
+    controller : 'ProgramController'
   })
   .state('about', {
     url : '/about',

@@ -6,11 +6,13 @@
   color: $gsa-red;
 }
 
-h1.header {
+.demo-toolbar h1 {
   font-size: em($font-size-lg);
   
   @include breakpoint(850px, $no-query: true) {
     font-size: em($font-size-xxl);
+    color: white;
+    margin: .75em 0;
   }
 }
 

@@ -1,4 +1,4 @@
-angular.module('gsaHackathon').controller('HomeController',
+angular.module('gsaHackathon').controller('ProgramController',
     function($scope, $stateParams, $state, vouchers, airfare, $mdToast) {
       $scope.data = [ {
         key : 'April',
@@ -28,8 +28,4 @@ angular.module('gsaHackathon').controller('HomeController',
           value : '23000',
         } ]
       } ];
-      
-      vouchers.find({
-        agency : 'Agency A',
-      })
     });

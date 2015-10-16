@@ -12,3 +12,25 @@ md-section.center {
 		width: 300px;
 	}
 }
+
+md-grid-list {
+	md-section {
+	    border:1px solid #CCC;
+	    background-color: rgb(63,81,181);
+	    box-shadow: 4px 0px 4px #888888;
+	    font-family:""RobotoDraft","Roboto",sans-serif";
+	    
+	    h2 {
+		    text-align:center;
+		    color:white;
+		}
+		
+		& > div.layout-row {
+			background: white;
+		    padding: 20px;
+		    margin: 11px auto;
+		    font-size: 1.2em;
+		    width: 95%;
+		}
+	}
+}
