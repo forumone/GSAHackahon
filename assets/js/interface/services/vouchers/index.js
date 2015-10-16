@@ -13,8 +13,13 @@ angular.module('gsaHackathon').service('vouchers', function($http) {
     return $http.get('/vouchers/' + id);
   }
   
+  function getPrograms() {
+    return $http.get('/programs');
+  }
+  
   return {
     find : find,
     findOne : findOne,
+    getPrograms : getPrograms
   }
 });

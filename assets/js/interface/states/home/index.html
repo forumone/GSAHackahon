@@ -71,121 +71,16 @@
   </div>
   <div class="md-whiteframe-z3">
     <md-grid-list md-cols="3" md-gutter="1em" md-row-height="4:3">
-      <md-grid-tile>
+      <md-grid-tile ng-repeat="program in programs">
         <md-section flex class="center">
-          <md-toolbar><h2><a ui-sref="program">Program 1</a></h2></md-toolbar>
+          <md-toolbar><h2><a ui-sref="program">{{program.organization}}</a></h2></md-toolbar>
           <div layout>
             <div layout="row">
               <div layout="column">
-                <div>$400,000</div>
+                <div>{{program.total_expenses | currency}}</div>
                 <div>($60,000)</div>
                 <div><hr/></div>
-                <div>$340,000</div>
-              </div>
-              <div layout="column" class="labels">
-                <div>Total</div>
-                <div>Expenses</div>
-                <div><hr/></div>
-                <div>Available</div>
-              </div>
-            </div>
-          </div>
-        </md-section>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-section flex class="center">
-          <md-toolbar><h2><a ui-sref="program">Program 2</a></h2></md-toolbar>
-          <div layout>
-            <div layout="row">
-              <div layout="column">
-                <div>$400,000</div>
-                <div>($60,000)</div>
-                <div><hr/></div>
-                <div>$340,000</div>
-              </div>
-              <div layout="column" class="labels">
-                <div>Total</div>
-                <div>Expenses</div>
-                <div><hr/></div>
-                <div>Available</div>
-              </div>
-            </div>
-          </div>
-        </md-section>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-section flex class="center">
-          <md-toolbar><h2><a ui-sref="program">Program 3</a></h2></md-toolbar>
-          <div layout>
-            <div layout="row">
-              <div layout="column">
-                <div>$400,000</div>
-                <div>($60,000)</div>
-                <div><hr/></div>
-                <div>$340,000</div>
-              </div>
-              <div layout="column" class="labels">
-                <div>Total</div>
-                <div>Expenses</div>
-                <div><hr/></div>
-                <div>Available</div>
-              </div>
-            </div>
-          </div>
-        </md-section>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-section flex class="center">
-          <md-toolbar><h2><a ui-sref="program">Program 4</a></h2></md-toolbar>
-          <div layout>
-            <div layout="row">
-              <div layout="column">
-                <div>$400,000</div>
-                <div>($60,000)</div>
-                <div><hr/></div>
-                <div>$340,000</div>
-              </div>
-              <div layout="column" class="labels">
-                <div>Total</div>
-                <div>Expenses</div>
-                <div><hr/></div>
-                <div>Available</div>
-              </div>
-            </div>
-          </div>
-        </md-section>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-section flex class="center">
-          <md-toolbar><h2><a ui-sref="program">Program 5</a></h2></md-toolbar>
-          <div layout>
-            <div layout="row">
-              <div layout="column">
-                <div>$400,000</div>
-                <div>($60,000)</div>
-                <div><hr/></div>
-                <div>$340,000</div>
-              </div>
-              <div layout="column" class="labels">
-                <div>Total</div>
-                <div>Expenses</div>
-                <div><hr/></div>
-                <div>Available</div>
-              </div>
-            </div>
-          </div>
-        </md-section>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-section flex class="center">
-          <md-toolbar><h2><a ui-sref="program">Program 6</a></h2></md-toolbar>
-          <div layout>
-            <div layout="row">
-              <div layout="column">
-                <div>$400,000</div>
-                <div>($60,000)</div>
-                <div><hr/></div>
-                <div>$340,000</div>
+                <div>{{program.total_expenses - 60000 | currency}}</div>
               </div>
               <div layout="column" class="labels">
                 <div>Total</div>
@@ -198,7 +93,6 @@
         </md-section>
       </md-grid-tile>
     </md-grid-list>
-    
   </div>
 </div>
 
