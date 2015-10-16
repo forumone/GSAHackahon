@@ -1,4 +1,10 @@
 ---
+forumone::databases: 
+  web: 
+    username: web
+  gsa:
+    username: gsa
+    
 forumone::webserver::vhosts:  
   vagrant: 
     path: "/vagrant/public"

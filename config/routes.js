@@ -41,12 +41,6 @@ module.exports.routes = {
   '/definitions' : {
     view : 'definitions'
   },
-  
-  'GET /api/fda/proxy/:endpoint' : 'OpenFdaController.apiProxy',
-  'GET /api/substances/substances' : 'SubstancesController.getSubstances',
-  'GET /api/substances/brands' : 'SubstancesController.getBrands',
-  'GET /api/content/:page' : 'ContentController.getContent',
-  'GET /api/fda/eventdates' : 'OpenFdaController.eventDates',
 
   /***************************************************************************
   *                                                                          *
